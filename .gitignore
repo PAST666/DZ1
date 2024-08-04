@@ -1,0 +1,5 @@
+.venv/
+blog/__pucache__/
+db.sqlite3
+__pycache__*
+.vscode/launch.json
