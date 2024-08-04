@@ -1,0 +1,26 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px 0 rgb(107, 80, 80);
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(237, 217, 217);
+}
+tr:hover {
+    background-color: rgb(125, 230, 65);
+}
+td {
+    padding: 20px;
+    border: 1px solid black;
+}
+td:nth-child(1) {
+    background-color: rgb(217, 230, 174);
+}
+th {
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgb(217, 230, 174);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
