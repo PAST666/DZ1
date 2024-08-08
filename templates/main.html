@@ -4,11 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Диагностика здоровья</title>
+    <title>{% block title %}Диагностика здоровья{% endblock %}</title>
 </head>
 <body>
+    <header>
+
+
+        {% block nav %} {% include "includes/nav.html" %} {% endblock %}
+    </header>
     {% block content %}
-        <h1>Здесь будет сайт!</h1>
+    <div id="div-header">
+        <div id="main-block-01">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perferendis.</p>
+        </div>
+        <div id="main-block-02">
+            <p><i class="bi bi-house"></i> Адрес: г.Улан-Удэ, пр-т Строителей, 18</br><i class="bi bi-telephone"></i> Телефон: 66-00-88</br><i class="bi bi-clock"></i> Время работы:</br>Пн-Пт: 9:00-12:00; 13:00-17:00</br>Сб: 9:00-12:00; 13:00-15:00</p>
+        </div>
+        <div id="main-block-03">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, aperiam velit!</p>
+        </div>
+    </div>
     {% endblock %}   
 </body>
 </html>

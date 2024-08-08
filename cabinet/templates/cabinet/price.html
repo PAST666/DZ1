@@ -5,28 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цены</title>
+    <title>{% block title %}Цены{% endblock %}</title>
 
 </head>
 <body>
     {% block content %}
+        <p><h2>Цены</h2></p>
+    
     <section>
-        <h2>Цены</h2>
+        
         <table>
             <tr>
                 <th>Вид исследования</th>
                 <th>Стоимость</th>
             </tr>
             <tr>
-                <td>УЗИ 1</td>
+                <td>УЗИ органов брюшной полости</td>
                 <td>1000</td>
             </tr>
             <tr>
-                <td>УЗИ 2</td>
+                <td>УЗИ молочных желез</td>
                 <td>1100</td>
             </tr>
             <tr>
-                <td>УЗИ 3</td>
+                <td>УЗИ органов малого таза</td>
                 <td>1200</td>
             </tr>
             <tr>
