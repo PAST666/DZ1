@@ -1,0 +1,27 @@
+/* main.html */
+body {
+    background-color: rgb(205, 205, 205);
+}
+#div-header {
+    display: flex;
+}
+#main-block-01, #main-block-03 {
+    flex: 1;
+    max-width: 33.33%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+#main-block-02
+{
+    flex: 1;
+    max-width: 33.33%;
+    text-align: left;
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}

@@ -22,9 +22,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/tomorrow-night-bright.min.css"
     />
     {% comment %} <link rel="stylesheet" href="{% static 'css/base.css' %}" /> {% endcomment %}
+    {% block css %}
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/price.css' %}" />
-
+    {% endblock %}
     {% block head %}{% endblock %}
   </head>
   <body>
