@@ -2,8 +2,24 @@
 body {
     background-color: rgb(205, 205, 205);
 }
+
 #div-header {
     display: flex;
+}
+#mesto {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white; 
+}
+#mesto-p {
+    width: 70%;
+    text-align: justify;
+    font-size: larger
+
 }
 #main-block-01, #main-block-03 {
     flex: 1;
