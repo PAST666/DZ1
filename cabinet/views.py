@@ -10,6 +10,10 @@ menu = [
         "alias":"price",
     },
         {
+        "name":"Записаться на прием",
+        "alias":"appointment",
+    },
+        {
         "name":"Лицензия",
         "alias":"license",
     },
@@ -40,6 +44,13 @@ def price(request):
         "page_alias": "price",
         }
     return render (request, 'cabinet/price.html', context)
+
+def appointment(request):
+    context= {
+        "menu": menu,
+        "page_alias": "appointment",
+        }
+    return render (request, 'cabinet/appointment.html', context)
 
 def license(request):
     context= {
