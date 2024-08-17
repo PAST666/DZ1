@@ -14,6 +14,7 @@ urlpatterns = [
     path("gallery/", views.gallery, name="gallery"),
     path("preparation/", views.preparation, name="preparation"),
     path("reviews/", views.reviews, name="reviews"),
+    path("thanks_page/", views.thanks_page, name="thanks_page"),
 ]
 
 if settings.DEBUG:

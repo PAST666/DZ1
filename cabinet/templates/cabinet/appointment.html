@@ -8,7 +8,38 @@
 </head>
 <body>
     {% block content %}
-        <h1>Здесь можно записаться на прием</h1>
+        <section>
+            <div class="container class_form">
+                <h1 class="text-3">Оставь заявку и получи услугу</h1>
+                <div class="row justify-content-center">
+                    <form action="{% url "thanks_page" %}" method="GET" style="width: 50%;">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label><br>
+                            <input type="text" value="" name="name" class="form-control">
+                            <div class=""></div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Телефон</label><br>
+                            <input type="text" value="" name="phone" class="form-control">
+                            <div class=""></div>
+                        </div>
+                        <label for="start">Выберите дату:</label>
+                            <input type="date" id="start" name="date" value="{{ min_day_value }}"
+                            min="{{ min_day_value }}" max="2025-09-01">
+                        <label for="start">Выберите доступное время:</label>
+                            <select id="select" name="time" class="form-select form-select-lg mb-3" aria-label=".form-select-lg extends">
+                                {% for time in all_time %}
+                                    <option value="{{ time }}">{{ time }}</option>
+                                {% endfor %}
+                        </select>
+
+                        <div style="float:right;" class="form-group row">
+                            <button type="submit" class="btn btn-success">Оставить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     {% endblock %}   
 </body>
 </html>
