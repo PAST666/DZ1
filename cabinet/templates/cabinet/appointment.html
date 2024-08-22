@@ -8,11 +8,49 @@
 </head>
 <body>
     {% block content %}
+    <div class="container py-4">
+        <div class="row">      
+          <section id="orderForm" class="col-12 mb-4">
+            <h2>Запись на обследование</h2>
+            <p>
+              Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, выберите удобное для вас время и приходите! Помните - лучше обследоваться, чем лечиться!
+            </p>
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="mb-3">{{ form.as_p }}</div>
+              <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+          </section>      
+        </div>
+      </div>
+    {% endblock %}  
+    {% comment %} {% block content %}
         <section>
             <div class="container class_form">
                 <h1 class="text-3">Оставь заявку и получи услугу</h1>
+                <h3>{{ step }}</h3>
+
                 <div class="row justify-content-center">
-                    <form action="{% url "thanks_page" %}" method="GET" style="width: 50%;">
+                    {% if step_1 %}
+                    <form action="{% url "appointment" %}" method="GET" style="width: 25%;">                        
+                        <label for="start">Выберите дату:</label>
+                            <input type="date" id="start" name="date" value="{{ min_day_value }}"
+                            min="{{ min_day_value }}" max="2025-09-01">
+                        <div style="float:right;" class="form-group row">
+                            <button type="submit" class="btn btn-success">Далее</button>
+                        </div>
+                    </form>
+                    {% endif %}
+                    {% if step_2 %}
+                    <form action="{% url "thanks_page" %}" method="POST" style="width: 50%;">
+                        {% csrf_token %}
+                        <label for="start">Выберите доступное время:</label>
+                        <select id="select" name="time" class="form-select form-select-lg mb-3" aria-label=".form-select-lg extends">
+                            {% for time in all_time %}
+                                <option value="{{ time }}">{{ time }}</option>
+                            {% endfor %}
+                        </select>
+                        
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label><br>
                             <input type="text" value="" name="name" class="form-control">
@@ -23,23 +61,26 @@
                             <input type="text" value="" name="phone" class="form-control">
                             <div class=""></div>
                         </div>
-                        <label for="start">Выберите дату:</label>
-                            <input type="date" id="start" name="date" value="{{ min_day_value }}"
-                            min="{{ min_day_value }}" max="2025-09-01">
-                        <label for="start">Выберите доступное время:</label>
-                            <select id="select" name="time" class="form-select form-select-lg mb-3" aria-label=".form-select-lg extends">
-                                {% for time in all_time %}
-                                    <option value="{{ time }}">{{ time }}</option>
-                                {% endfor %}
-                        </select>
-
+                        <input type="hidden" name = "date" value="{{ choised_day }}">
+                        <div style="float:left;" class="form-group row">
+                            <a href="{% url "appointment" %}" type="submit" class="btn btn-danger">Выбрать другую дату</a>
+                        </div>
                         <div style="float:right;" class="form-group row">
                             <button type="submit" class="btn btn-success">Оставить заявку</button>
-                        </div>
-                    </form>
+                        </div>                        
+                    </form> 
+                    {% endif %}                    
                 </div>
             </div>
         </section>
-    {% endblock %}   
+    {% endblock %}    {% endcomment %}
+    {% block footer %}
+    <footer>
+        <div class="container-xl">
+            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+            <p class="text-center">Автор: @alextopdpu</p>
+        </div>
+    </footer>
+    {% endblock %}
 </body>
 </html>
