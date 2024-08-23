@@ -29,7 +29,7 @@
             <p>
               В УЗИ-кабинете "Диагностика здоровья" работают настоящие профессионалы своего дела. Сочетая опыт, критическое мышление, наши врачи видят объективную клиническу картину пацинта. Они готовы провести консультации в разных направлениях. Каждый пациент важен для нас!
             </p>
-            <div id="mastersCarouselIndicators" class="carousel slide mx-auto" data-bs-ride="carousel">
+            <div id="mastersCarouselIndicators" class="carousel slide mx-auto" style="width: 400px;" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 {% for master in masters %}
                   <button type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
