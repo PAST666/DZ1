@@ -66,4 +66,30 @@ class Service(models.Model):
     class Meta:
         verbose_name = "Услуга"
         verbose_name_plural = "Услуги"
+
+class License(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Название')
+    description = models.TextField(verbose_name='Описание')
+    photo = models.ImageField(upload_to='license/photos/', blank=True, null=True, verbose_name='Лицензия')
+
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Лицензия"
+        verbose_name_plural = "Лицензии"
+
+class Gallery(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Название')
+    description = models.TextField(verbose_name='Описание')
+    photo = models.ImageField(upload_to='gallery/photos/', blank=True, null=True, verbose_name='Галерея')
+
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Галерея"
+        verbose_name_plural = "Галереи"
         

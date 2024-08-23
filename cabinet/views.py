@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 # from datetime import datetime
 # from .models import Order
 from .forms import VisitModelForm
-from .models import Visit, Master
+from .models import Visit, Master, License, Gallery
 
 menu = [
     {
@@ -101,16 +101,20 @@ def appointment(request):
 
 
 def license(request):
+    licenses = License.objects.all()
     context= {
         "menu": menu,
         "page_alias": "license",
+        "licenses": licenses
         }
     return render (request, 'cabinet/license.html', context)
 
 def gallery(request):
+    gallerys = Gallery.objects.all()
     context= {
         "menu": menu,
         "page_alias": "gallery",
+        "gallerys": gallerys
         }
     return render (request, 'cabinet/gallery.html', context)
 

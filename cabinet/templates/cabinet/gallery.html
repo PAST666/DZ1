@@ -1,14 +1,29 @@
 {% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+    {% endblock %}
 </head>
 <body>
     {% block content %}
-        <h1>Фотографии о нашем кабинете!</h1>
-    {% endblock %}   
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                {% for gallery in gallerys %}
+                <div class="mb-5">
+                    <img src="{{ gallery.photo.url }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> 
+    {% endblock %} 
 </body>
 </html>

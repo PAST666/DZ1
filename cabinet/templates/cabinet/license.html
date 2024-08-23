@@ -1,14 +1,52 @@
 {% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лицензия</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/license.css' %}" />
+    {% endblock %}
 </head>
 <body>
     {% block content %}
-        <h1>Тут размещена лицензия</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                {% for license in licenses %}
+                <div>
+                    <img src="{{ license.photo.url }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        {% comment %} <div id="licensesCarouselIndicators" class="carousel slide mx-auto" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              {% for license in licenses %}
+                <button type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+              {% endfor %}
+            </div>
+            <div class="carousel-inner">
+              {% for license in licenses %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <img src="{{ license.photo.url }}" class="d-block w-100" alt="{{ license.first_name }} {{ license.last_name }}">
+                </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section> {% endcomment %}
     {% endblock %}   
 </body>
 </html>
