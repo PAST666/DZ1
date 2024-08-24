@@ -1,6 +1,7 @@
 body {
     background-color: rgb(242, 246, 192);
+    font-size: larger;
 }
-h3, p, ul {
+/* h3, p, ul {
     font-size: medium;
-}
+} */

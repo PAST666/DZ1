@@ -92,4 +92,17 @@ class Gallery(models.Model):
     class Meta:
         verbose_name = "Галерея"
         verbose_name_plural = "Галереи"
+
+class Review(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Название')
+    description = models.TextField(verbose_name='Описание')
+    photo = models.ImageField(upload_to='review/photos/', blank=True, null=True, verbose_name='Отзыв')
+
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"
         

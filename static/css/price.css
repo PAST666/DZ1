@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(152, 240, 199, 0.941);
+    background-color: rgba(248, 232, 208, 0.941);
   }
 
 h3, h2, section{
@@ -35,7 +35,7 @@ td {
     text-align: center;
 }
 td:nth-child(1) {
-    background-color: rgb(195, 218, 220);
+    background-color: rgb(220, 206, 195);
 }
 
 

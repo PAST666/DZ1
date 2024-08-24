@@ -1,14 +1,29 @@
 {% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отзывы</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/review.css' %}" />
+    {% endblock %}
 </head>
 <body>
     {% block content %}
-        <h1>Здесь будет скриншоты отзывов из 2 ГИС</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                {% for review in reviews %}
+                <div class="mb-5">
+                    <img src="{{ review.photo.url }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     {% endblock %}   
 </body>
 </html>
