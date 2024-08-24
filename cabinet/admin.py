@@ -3,7 +3,7 @@ from django.contrib import admin
 
 # admin.site.register(Order)
 # Register your models here.
-from .models import Visit, Master, Service, License, Gallery, Review
+from .models import Visit, Master, Service, License, Gallery, Review, Price
 
 @admin.register(Visit)
 class VisitAdmin(admin.ModelAdmin):
@@ -39,3 +39,8 @@ class GalleryAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('name', 'description',)
     search_fields = ('name', 'description')
+
+@admin.register(Price)
+class PriceAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price',)
+    search_fields = ('name', 'price')

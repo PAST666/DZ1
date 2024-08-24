@@ -18,12 +18,24 @@
     
     <section>
         
-        <table>
+        <table class="mb-5">
             <tr>
                 <th>Вид исследования</th>
                 <th>Стоимость</th>
             </tr>
+            {% for i in prices %}
             <tr>
+                <td class="rowname">
+                    {{ i.name }}
+                </td>
+                <td>
+                    {{ i.price }}
+                </td>
+            </tr>
+            {% endfor %}
+
+
+            {% comment %} <tr>
                 <td>УЗИ органов брюшной полости</td>
                 <td>1000</td>
             </tr>
@@ -100,7 +112,7 @@
             <tr>
                 <td>УЗИ 20</td>
                 <td>2000</td>
-            </tr>
+            </tr> {% endcomment %}
         </table>
     </section>
     {% endblock %}   
