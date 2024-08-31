@@ -2,6 +2,10 @@
 body {
     background-color: rgb(205, 205, 205);
     font-size: larger;
+    text-align: justify;
+}
+h5 {
+    color: rgb(187, 247, 84);
 }
 
 #div-header {
