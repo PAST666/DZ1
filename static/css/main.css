@@ -1,6 +1,7 @@
 /* main.html */
-body {
-    background-color: rgb(205, 205, 205);
+
+body {    
+    background:linear-gradient(white,rgb(156, 156, 156));
     font-size: larger;
     text-align: justify;
 }

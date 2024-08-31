@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 # from .models import Order
 from .forms import VisitModelForm
 from .models import Visit, Master, License, Gallery, Review, Price
+from django.http import JsonResponse
 
 menu = [
     {
@@ -159,3 +160,7 @@ def thanks_page(request):
     #     "page_alias": "thanks_page",
     #     }
     #     return render (request, 'cabinet/thanks_page.html', context)
+def get_services_by_master(request, master_id):
+    services = Master.objects.get(id=master_id).services.all()
+    services_data = [{'id': service.id, 'name': service.name} for service in services]
+    return JsonResponse({'services': services_data})

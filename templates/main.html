@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Диагностика здоровья{% endblock %}</title>
     {% block css %}
-        <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+        {% comment %} <link rel="stylesheet" href="{% static 'css/footer.css' %}" /> {% endcomment %}
         <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     {% endblock %}
 </head>
@@ -32,7 +32,14 @@
             <div id="mastersCarouselIndicators" class="carousel slide mx-auto" style="width: 400px;" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 {% for master in masters %}
-                  <button type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+                <button 
+                    type="button"
+                    data-bs-target="#mastersCarouselIndicators" 
+                    data-bs-slide-to="{{ forloop.counter0 }}" 
+                    class="{% if forloop.first %}active{% endif %}" 
+                    aria-current="true" 
+                    aria-label="Slide {{ forloop.counter }}">
+                </button>
                 {% endfor %}
               </div>
               <div class="carousel-inner">
@@ -45,11 +52,19 @@
                   </div>
                 {% endfor %}
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide="prev">
+              <button 
+                class="carousel-control-prev" 
+                type="button" 
+                data-bs-target="#mastersCarouselIndicators" 
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide="next">
+              <button 
+                class="carousel-control-next" 
+                type="button" 
+                data-bs-target="#mastersCarouselIndicators" 
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>

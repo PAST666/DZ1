@@ -15,6 +15,9 @@ urlpatterns = [
     path("preparation/", views.preparation, name="preparation"),
     path("reviews/", views.reviews, name="reviews"),
     path("thanks_page/", views.thanks_page, name="thanks_page"),
+    path(
+    "get_services_by_master/<int:master_id>/", views.get_services_by_master,
+    name="get_services_by_master"),
 ]
 
 if settings.DEBUG:
