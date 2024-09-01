@@ -27,8 +27,8 @@
     <nav id="pagination" class="list-pages">
         <ul class="pagination">
             {% for p in page_obj.paginator.page_range %}
-                {% if page.obj.number == p %}
-                    <li class="page-item page-item-selected"
+                {% if page_obj.number == p %}
+                    <li class="page-item page-item-selected">
                         {{ p }}
                     </li>
                 {% else %}
