@@ -27,9 +27,17 @@
     <nav id="pagination" class="list-pages">
         <ul class="pagination">
             {% for p in page_obj.paginator.page_range %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ p }}">{{ p }}</a>
-                </li>
+                {% if page.obj.number == p %}
+                    <li class="page-item page-item-selected"
+                        {{ p }}
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ p }}">
+                            {{ p }}
+                        </a>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </nav>
