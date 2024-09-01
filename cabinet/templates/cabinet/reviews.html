@@ -26,6 +26,14 @@
     </div>
     <nav id="pagination" class="list-pages">
         <ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Назад">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+    
             {% for p in page_obj.paginator.page_range %}
                 {% if page_obj.number == p %}
                     <li class="page-item page-item-selected">
@@ -39,6 +47,14 @@
                     </li>
                 {% endif %}
             {% endfor %}
+    
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Вперед">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
     {% endblock %}
