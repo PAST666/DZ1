@@ -1,9 +1,11 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 # from datetime import datetime
 # from .models import Order
 from .forms import VisitModelForm
 from .models import Visit, Master, License, Gallery, Review, Price
 from django.http import JsonResponse
+from django.core.paginator import Paginator
 
 menu = [
     {
@@ -130,12 +132,16 @@ def preparation(request):
 
 def reviews(request):
     reviews = Review.objects.all()
+    paginator = Paginator(reviews, 5)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     context= {
         "menu": menu,
         "page_alias": "reviews",
-        "reviews": reviews
+        "page_obj": page_obj,
         }
     return render (request, 'cabinet/reviews.html', context)
+
 
 def thanks_page(request):
     # if request.POST:

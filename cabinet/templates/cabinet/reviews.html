@@ -16,14 +16,24 @@
     <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 mt-5 mb-4 mb-lg-0">
-                {% for review in reviews %}
+                {% for i in page_obj %}
                 <div class="mb-5">
-                    <img src="{{ review.photo.url }}">
+                    <img src="{{ i.photo.url }}">
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-    {% endblock %}   
+    <nav id="pagination" class="list-pages">
+        <ul class="pagination">
+            {% for p in page_obj.paginator.page_range %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endblock %}
+
 </body>
 </html>

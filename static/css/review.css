@@ -5,3 +5,7 @@
 body {
     background-color: rgb(205, 205, 205);
 }
+#pagination {
+    display: flex;
+    justify-content: center;
+}

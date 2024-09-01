@@ -1,5 +1,7 @@
+from msilib.schema import ListView
 from tabnanny import verbose
 from django.db import models
+from django.views.generic import ListView
 
 # class Order(models.Model):
 #     order_dt = models.DateTimeField(auto_now=True)
@@ -93,7 +95,7 @@ class Gallery(models.Model):
         verbose_name = "Галерея"
         verbose_name_plural = "Галереи"
 
-class Review(models.Model):
+class Review(models.Model, ListView):
     name = models.CharField(max_length=50, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
     photo = models.ImageField(upload_to='review/photos/', blank=True, null=True, verbose_name='Отзыв')
