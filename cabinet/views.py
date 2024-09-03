@@ -57,22 +57,27 @@ def price(request):
         }
     return render (request, 'cabinet/price.html', context)
 
-def appointment(request):
-    if request.method == 'POST':
+class AppointmentView(View):
+    def get(self, request):
+        form = VisitModelForm()
+        context= {
+            "menu": menu,
+            "page_alias": "appointment",
+            'form': form,
+            }
+        return render(request, 'cabinet/appointment.html', context)
+    def post(self, request):
         form = VisitModelForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('thanks_page')
-    else:
-        form = VisitModelForm()
-
-    context= {
-        "menu": menu,
-        "page_alias": "appointment",
-        'form': form,
-
-        }
-    return render(request, 'cabinet/appointment.html', context)
+        if form.errors:
+            context= {
+            "menu": menu,
+            "page_alias": "appointment",
+            'form': form,
+            }
+            return render(request, 'cabinet/appointment.html', context)
 
     # return render (request, 'cabinet/appointment.html', context)
     # all_time = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30"]
@@ -150,7 +155,6 @@ class ThanksView (View):
         }
         return render (request, 'cabinet/thanks_page.html', context)
 
- 
 def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
     services_data = [{'id': service.id, 'name': service.name} for service in services]
