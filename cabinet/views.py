@@ -6,6 +6,7 @@ from .forms import VisitModelForm
 from .models import Visit, Master, License, Gallery, Review, Price
 from django.http import JsonResponse
 from django.core.paginator import Paginator
+from django.views.generic import View
 
 menu = [
     {
@@ -142,30 +143,14 @@ def reviews(request):
         }
     return render (request, 'cabinet/reviews.html', context)
 
-
-def thanks_page(request):
-    # if request.POST:
-    #     name=request.POST["name"]
-    #     phone=request.POST["phone"]
-    #     day=request.POST["date"]
-    #     time=request.POST["time"]
-    #     element = Order(
-    #         order_name=name,
-    #         order_phone=phone,
-    #         order_day=day,
-    #         order_time=time)
-    #     element.save()
+class ThanksView (View):
+    def get (self,request):
         context= {
         "page_alias": "thanks_page",
-        # "name": name,
-
         }
         return render (request, 'cabinet/thanks_page.html', context)
-    # else:
-    #     context= {
-    #     "page_alias": "thanks_page",
-    #     }
-    #     return render (request, 'cabinet/thanks_page.html', context)
+
+ 
 def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
     services_data = [{'id': service.id, 'name': service.name} for service in services]
