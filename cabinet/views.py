@@ -190,4 +190,4 @@ class VisitUpdateView(UpdateView):
     template_name = "cabinet/visit_form.html"
     model = Visit
     form_class = VisitEditModelForm
-    success_url = reverse_lazy("thanks")
+    success_url = reverse_lazy('thanks_page')
