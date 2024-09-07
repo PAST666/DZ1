@@ -3,6 +3,13 @@ from django.urls import path
 from cabinet.views import main, price, AppointmentView, license, gallery, preparation, reviews, ThanksView, get_services_by_master
 from django.conf import settings
 from django.conf.urls.static import static
+from cabinet.views import (
+    VisitCreateView,
+    # MainView,
+    # ThanksTemplateView,
+    VisitDetailView,
+    # VisitUpdateView,
+    ) 
 
 
 urlpatterns = [
@@ -17,6 +24,8 @@ urlpatterns = [
     path("thanks_page/", ThanksView.as_view(), name="thanks_page"),
     path("get_services_by_master/<int:master_id>/", get_services_by_master,
     name="get_services_by_master"),
+    path("visit_form/", VisitCreateView.as_view(), name="visit_form"),
+    path("visit/<int:pk>/view", VisitDetailView.as_view(), name="visit_edit"),
 ]
 
 if settings.DEBUG:

@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 # from datetime import datetime
 # from .models import Order
 from .forms import VisitModelForm
@@ -7,6 +8,18 @@ from .models import Visit, Master, License, Gallery, Review, Price
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.views.generic import View
+from django.views.generic import (
+    View,
+    TemplateView,
+    FormView,
+    CreateView,
+    DetailView,
+    UpdateView,
+    ListView,
+    DeleteView,
+)
+from django.urls import reverse_lazy
+from django.db.models import Q
 
 menu = [
     {
@@ -159,3 +172,16 @@ def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
     services_data = [{'id': service.id, 'name': service.name} for service in services]
     return JsonResponse({'services': services_data})
+
+
+
+class VisitCreateView(CreateView):
+    template_name = "cabinet/visit_form.html"
+    model = Visit
+    form_class = VisitModelForm
+    success_url = reverse_lazy('thanks_page')
+
+class VisitDetailView(DetailView):
+    template_name = "visit_detail.html"
+    model = Visit
+    context_object_name = "visit"
