@@ -24,8 +24,8 @@ urlpatterns = [
     path("thanks_page/", ThanksView.as_view(), name="thanks_page"),
     path("get_services_by_master/<int:master_id>/", get_services_by_master,
     name="get_services_by_master"),
-    path("visit_form/", VisitCreateView.as_view(), name="visit_form"),
-    path("visit/<int:pk>/view", VisitDetailView.as_view(), name="visit_edit"),
+    path("visit_add/", VisitCreateView.as_view(), name="visit_form"),
+    path("visit/<int:pk>/view/", VisitDetailView.as_view(), name="visit-view"),
 ]
 
 if settings.DEBUG:

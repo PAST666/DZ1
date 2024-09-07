@@ -182,6 +182,6 @@ class VisitCreateView(CreateView):
     success_url = reverse_lazy('thanks_page')
 
 class VisitDetailView(DetailView):
-    template_name = "visit_detail.html"
+    template_name = "cabinet/visit_detail.html"
     model = Visit
     context_object_name = "visit"
