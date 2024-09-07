@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 # from datetime import datetime
 # from .models import Order
-from .forms import VisitModelForm
+from .forms import VisitModelForm, VisitEditModelForm
 from .models import Visit, Master, License, Gallery, Review, Price
 from django.http import JsonResponse
 from django.core.paginator import Paginator
@@ -185,3 +185,9 @@ class VisitDetailView(DetailView):
     template_name = "cabinet/visit_detail.html"
     model = Visit
     context_object_name = "visit"
+
+class VisitUpdateView(UpdateView):
+    template_name = "cabinet/visit_form.html"
+    model = Visit
+    form_class = VisitEditModelForm
+    success_url = reverse_lazy("thanks")

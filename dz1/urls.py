@@ -8,7 +8,7 @@ from cabinet.views import (
     # MainView,
     # ThanksTemplateView,
     VisitDetailView,
-    # VisitUpdateView,
+    VisitUpdateView,
     ) 
 
 
@@ -25,7 +25,8 @@ urlpatterns = [
     path("get_services_by_master/<int:master_id>/", get_services_by_master,
     name="get_services_by_master"),
     path("visit_add/", VisitCreateView.as_view(), name="visit_form"),
-    path("visit/<int:pk>/view/", VisitDetailView.as_view(), name="visit-view"),
+    path("visit/<int:pk>/view/", VisitDetailView.as_view(), name="visit_view"),
+    path("visit/<int:pk>/edit/", VisitUpdateView.as_view(), name="visit_edit"),
 ]
 
 if settings.DEBUG:

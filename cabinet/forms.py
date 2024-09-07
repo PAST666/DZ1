@@ -56,3 +56,11 @@ class VisitModelForm(forms.ModelForm):
                 self.add_error('services', f"Мастер {master.first_name} {master.last_name} не предоставляет следующие услуги: {unsupported_services_str}.")
 
         return cleaned_data
+    
+class VisitEditModelForm(VisitModelForm):
+    class Meta(VisitModelForm.Meta):
+        fields = VisitModelForm.Meta.fields + ["status"]
+        widgets = {
+            **VisitModelForm.Meta.widgets,
+            "status": forms.Select(attrs={"class": "form-control"}),
+        }
