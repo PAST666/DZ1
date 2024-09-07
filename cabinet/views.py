@@ -162,11 +162,18 @@ def reviews(request):
     return render (request, 'cabinet/reviews.html', context)
 
 class ThanksView (View):
-    def get (self,request):
+    def get (self, request):
         context= {
         "page_alias": "thanks_page",
         }
         return render (request, 'cabinet/thanks_page.html', context)
+
+class DeleteView (View):
+    def get (self, request):
+        context= {
+        "page_alias": "thanks_page",
+        }
+        return render (request, 'cabinet/delete_page.html', context)
 
 def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
@@ -191,3 +198,8 @@ class VisitUpdateView(UpdateView):
     model = Visit
     form_class = VisitEditModelForm
     success_url = reverse_lazy('thanks_page')
+
+class VisitDeleteView(DeleteView):
+    template_name = "visit_delete.html"
+    model = Visit
+    success_url = reverse_lazy("delete_page")
