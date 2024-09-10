@@ -15,7 +15,7 @@
     {% block content %}
     <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-12 mt-5 mb-4 mb-lg-0">
+            <div class="col-lg-6 col-md-12 mt-5 mb-4 mb-lg-0">
                 {% for i in page_obj %}
                 <div class="mb-5">
                     <img src="{{ i.photo.url }}">
@@ -27,33 +27,17 @@
     <nav id="pagination" class="list-pages">
         <ul class="pagination">
             {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Назад">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
             {% endif %}
     
             {% for p in page_obj.paginator.page_range %}
-                {% if page_obj.number == p %}
-                    <li class="page-item page-item-selected">
-                        {{ p }}
-                    </li>
-                {% else %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ p }}">
-                            {{ p }}
-                        </a>
-                    </li>
-                {% endif %}
+                <li class="page-item {% if page_obj.number == p %}active{% endif %}">
+                    <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                </li>
             {% endfor %}
     
             {% if page_obj.has_next %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Вперед">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

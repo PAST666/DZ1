@@ -1,12 +1,19 @@
 /* main.html */
-
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 body {    
     background:linear-gradient(white,rgb(156, 156, 156));
-    font-size: larger;
+    /* font-size: larger; */
     text-align: justify;
 }
 h5 {
     color: rgb(187, 247, 84);
+}
+h2, p {
+    font-size: larger;
 }
 
 #div-header {

@@ -180,8 +180,6 @@ def get_services_by_master(request, master_id):
     services_data = [{'id': service.id, 'name': service.name} for service in services]
     return JsonResponse({'services': services_data})
 
-
-
 class VisitCreateView(CreateView):
     template_name = "cabinet/visit_form.html"
     model = Visit
@@ -200,6 +198,7 @@ class VisitUpdateView(UpdateView):
     success_url = reverse_lazy('thanks_page')
 
 class VisitDeleteView(DeleteView):
-    template_name = "visit_delete.html"
+    template_name = "cabinet/visit_delete.html"
     model = Visit
     success_url = reverse_lazy("delete_page")
+    pk_url_kwarg= "pk"
