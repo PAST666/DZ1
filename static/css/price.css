@@ -16,30 +16,41 @@ table {
 th {
     padding: 20px;
     border: 1px solid black;
-    background-color: rgb(108, 236, 248);
+    background-color: rgb(135, 134, 134);
     color: rgb(0, 0, 0);
     font-size: 1rem;
     text-align: center;
 }
 
-td:nth-child(2) {
-    background-color: rgb(128, 239, 178);
+/* td:nth-child(2) {
+    background-color: rgb(212, 212, 212);
 }
 td:hover {
-    background-color: rgb(244, 244, 53);
-}
+    background-color: white;
+} */
 
 td {
     padding: 20px;
     border: 1px solid black;
     text-align: center;
 }
-td:nth-child(1) {
-    background-color: rgb(220, 206, 195);
-}
+/* td:nth-child(1) {
+    background-color: rgb(177, 177, 177);
+} */
 .rowname {
     text-align: left;
 }
+tr {
+    background-color: rgb(188, 188, 188);
+}
+tr:hover td {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* td:hover {
+    background-color: #7ef5eb !important;
+} */
 
 
 
