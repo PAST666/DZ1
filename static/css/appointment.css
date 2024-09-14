@@ -4,3 +4,6 @@ body {
 p {
     font-size: larger;
 }
+.text-center {
+    font-size: medium;
+}

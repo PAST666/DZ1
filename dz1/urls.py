@@ -5,8 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from cabinet.views import (
     VisitCreateView,
-    # MainView,
-    # ThanksTemplateView,
     VisitDetailView,
     VisitUpdateView,
     VisitDeleteView,

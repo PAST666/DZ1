@@ -13,9 +13,11 @@
 </head>
 <body>
     {% block content %}
+    <h1 class="mb-0 mt-5">Наш кабинет: снаружи и внутри</h1>
     <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 mt-5 mb-4 mb-lg-0">
+
                 {% for gallery in gallerys %}
                 <div class="mb-5">
                     <img src="{{ gallery.photo.url }}">
