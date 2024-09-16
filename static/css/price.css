@@ -11,6 +11,7 @@ table {
     border: 1px solid black;
     border-collapse: collapse;
     box-shadow: 0 0 10px 0 rgb(107, 80, 80);
+    max-width: 50%;
 }
 
 th {

@@ -57,5 +57,8 @@ p {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 20px;
-    background-color: rgb(188, 188, 188);
+    background-color: rgb(204, 204, 204);
+}
+#masterphoto {
+    color: black;
 }
