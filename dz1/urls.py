@@ -8,8 +8,7 @@ from cabinet.views import (
     VisitDetailView,
     VisitUpdateView,
     VisitDeleteView,
-    ) 
-
+    )
 
 urlpatterns = [
     path('admin/', admin.site.urls),

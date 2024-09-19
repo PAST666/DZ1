@@ -23,21 +23,13 @@ th {
     text-align: center;
 }
 
-/* td:nth-child(2) {
-    background-color: rgb(212, 212, 212);
-}
-td:hover {
-    background-color: white;
-} */
 
 td {
     padding: 20px;
     border: 1px solid black;
     text-align: center;
 }
-/* td:nth-child(1) {
-    background-color: rgb(177, 177, 177);
-} */
+
 .rowname {
     text-align: left;
 }
@@ -49,9 +41,7 @@ tr:hover td {
     transition: background-color 0.3s ease;
 }
 
-/* td:hover {
-    background-color: #7ef5eb !important;
-} */
+
 
 
 
