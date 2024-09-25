@@ -1,4 +1,3 @@
-from msilib.schema import ListView
 from tabnanny import verbose
 from django.db import models
 from django.views.generic import ListView
