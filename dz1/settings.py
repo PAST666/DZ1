@@ -31,6 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://uzi03.ru",
     "https://past666-dz1-be0d.twc1.net"
 ]
 
