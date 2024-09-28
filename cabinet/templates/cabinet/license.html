@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Лицензия</title>
     {% block css %}
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
@@ -13,47 +13,22 @@
 </head>
 <body>
     {% block content %}
-    <div class="container">
+    <div class="container-fluid px-4">
         <div class="row">
-          <div class="col-lg-6 col-md-12 mt-5 mb-4 mb-lg-0">
+            <div class="col-12 mt-4 mb-4">
                 {% for license in licenses %}
-                <div class="mb-5">
-                    <img src="{{ license.photo.url }}">
+                <div class="mb-4">
+                    <img src="{{ license.photo.url }}" class="img-fluid" alt="License">
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-        {% comment %} <div id="licensesCarouselIndicators" class="carousel slide mx-auto" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              {% for license in licenses %}
-                <button type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
-              {% endfor %}
-            </div>
-            <div class="carousel-inner">
-              {% for license in licenses %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                  <img src="{{ license.photo.url }}" class="d-block w-100" alt="{{ license.first_name }} {{ license.last_name }}">
-                </div>
-              {% endfor %}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#licensesCarouselIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section> {% endcomment %}
     {% endblock %} 
     {% block footer %}
-    <footer>
-        <div class="container-xl">
-            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-            <p class="text-center">Автор: @alextopdpu</p>
-        </div>
+    <footer class="container-fluid">
+        <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+        <p class="text-center">Автор: @alextopdpu</p>
     </footer>
     {% endblock %}  
 </body>
