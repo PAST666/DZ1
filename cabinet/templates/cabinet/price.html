@@ -4,28 +4,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Цены{% endblock %}</title>
     {% block css %}
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
     <link rel="stylesheet" href="{% static 'css/price.css' %}" />
     {% endblock %}
+
 </head>
 <body class="price">
     {% block content %}
-    <div class="container-fluid px-4">
-        <h2 class="mt-4 mb-4">Цены</h2>
-        <div class="table-responsive">
-            <table class="table table-striped mb-5">
-                <!-- Содержимое таблицы остается без изменений -->
-            </table>
-        </div>
-    </div>
+        <p><h2>Цены</h2></p>
+    
+    <section>
+        
+        <table class="mb-5">
+            <tr>
+                <th>Вид исследования</th>
+                <th>Стоимость</th>
+            </tr>
+            {% for i in prices %}
+            <tr>
+                <td class="rowname">
+                    {{ i.name }}
+                </td>
+                <td>
+                    {{ i.price }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
     {% endblock %}  
     {% block footer %}
-    <footer class="container-fluid">
-        <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-        <p class="text-center">Автор: @alextopdpu</p>
+    <footer>
+        <div class="container-xl">
+            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+            <p class="text-center">Автор: @alextopdpu</p>
+        </div>
     </footer>
     {% endblock %}  
 </body>
