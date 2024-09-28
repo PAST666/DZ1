@@ -1,21 +1,35 @@
-body{
+body {
     background-color: rgb(205, 205, 205);
+    margin: 0;
+    padding: 0;
 }
 
-h3, h2, section{
-    display: flex;
-    justify-content: center;
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.table-container {
+    overflow-x: auto;
 }
 
 table {
     border: 1px solid black;
     border-collapse: collapse;
     box-shadow: 0 0 10px 0 rgb(107, 80, 80);
-    max-width: 50%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 th {
-    padding: 20px;
+    padding: 15px;
     border: 1px solid black;
     background-color: rgb(135, 134, 134);
     color: rgb(0, 0, 0);
@@ -23,9 +37,8 @@ th {
     text-align: center;
 }
 
-
 td {
-    padding: 20px;
+    padding: 15px;
     border: 1px solid black;
     text-align: center;
 }
@@ -33,12 +46,29 @@ td {
 .rowname {
     text-align: left;
 }
+
 tr {
     background-color: rgb(188, 188, 188);
 }
+
 tr:hover td {
     background-color: white;
     transition: background-color 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }
 
 
