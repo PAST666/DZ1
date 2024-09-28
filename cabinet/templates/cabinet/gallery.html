@@ -20,14 +20,14 @@
 
                 {% for gallery in gallerys %}
                 <div class="mb-5">
-                    <img src="{{ gallery.photo.url }}" class="img-fluid">
+                    <img src="{{ gallery.photo.url }}">
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div> 
     {% endblock %}
-    {% block footer %}
+        {% block footer %}
     <footer>
         <div class="container-xl">
             <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
