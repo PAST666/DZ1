@@ -63,9 +63,11 @@ p {
     color: black;
 }
 .map-container {
-    width: 100%;
-    height: 300px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 соотношение сторон */
+    height: 0;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .map-container iframe {
@@ -117,8 +119,8 @@ p {
     .carousel-inner {
         max-height: 400px;
     }
-    
+
     .map-container {
-        height: 200px;
+        padding-bottom: 75%; /* Увеличиваем высоту для мобильных устройств */
     }
 }
