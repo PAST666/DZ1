@@ -62,3 +62,42 @@ p {
 #masterphoto {
     color: black;
 }
+.map-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 200px;
+    }
+}
+#mastersCarouselIndicators {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    max-height: 600px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        max-height: 400px;
+    }
+}
