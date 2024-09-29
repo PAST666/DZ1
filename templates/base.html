@@ -34,37 +34,9 @@
     </main>
     {% block footer %}
       <footer class="bg-dark text-white py-4">
-        <div class="container-fluid px-4 py-4">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4">
-              <h5>Наши контакты</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <i class="bi bi-telephone-fill"></i>
-                  <a class="text-white text-decoration-none" href="tel:+79025337230">+7 (3012) 66-00-88</a>
-                </li>
-                <li>г Улан-Удэ, пр-т. Строителей, д. 18</li>
-                <li>Пн-Пт: 09:00 - 12:00; 13:00 - 17:00</li>
-                <li>Сб: 09:00 - 12:00; 13:00 - 15:00</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <h5>Мы на карте</h5>
-              <div class="map-container">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e03bb2e43c28a96605d245eabe3f0447834a71fd476f6a4f051811c280726ba&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
-                {% comment %} <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e03bb2e43c28a96605d245eabe3f0447834a71fd476f6a4f051811c280726ba&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe> {% endcomment %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    {% endblock %}
-
-    {% comment %} {% block footer %}
-      <footer class="bg-dark text-white py-4">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4">
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
               <h5>Наши контакты</h5>
               <ul class="list-unstyled">
                 <li>
@@ -96,7 +68,7 @@
       {% comment %} <div class="container-xl">
         <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
         <p class="text-center">Автор: @alextopdpu</p>
-      </div>
+      </div> {% endcomment %}
     </footer>
     {% endblock %}
     <script
@@ -108,7 +80,7 @@
     <script>
       hljs.highlightAll();
     </script>
-    {% comment %} <script src="{% static 'js/add_img_class.js' %}"></script>
-    {% block scripts %}{% endblock %} {% endcomment %}
+    {% comment %} <script src="{% static 'js/add_img_class.js' %}"></script> {% endcomment %}
+    {% block scripts %}{% endblock %}
   </body>
 </html>
