@@ -75,14 +75,12 @@ p {
     width: 100%;
     height: 100%;
 }
-
-@media (max-width: 768px) {
-    .map-container {
-        height: 200px;
-    }
+.carousel-half-width {
+    width: 50%;
+    max-width: 50%;
 }
+
 #mastersCarouselIndicators {
-    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -97,6 +95,11 @@ p {
 }
 
 @media (max-width: 768px) {
+    .carousel-half-width {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .carousel-inner {
         max-height: 400px;
     }
