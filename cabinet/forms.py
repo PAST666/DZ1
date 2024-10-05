@@ -13,6 +13,10 @@ class VisitModelForm(forms.ModelForm):
             'master': forms.Select(attrs={'class': 'form-control'}),
             'services': forms.SelectMultiple(attrs={'class': 'form-control'}),
         }
+        labels = {
+            'master': 'Врач',
+        }
+        
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
