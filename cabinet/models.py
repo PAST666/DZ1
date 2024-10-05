@@ -52,8 +52,8 @@ class Master(models.Model):
         return f'{self.first_name} {self.last_name} - {self.phone}'
     
     class Meta:
-        verbose_name = "Мастер"
-        verbose_name_plural = "Мастера"
+        verbose_name = "Врач"
+        verbose_name_plural = "Врачи"
 
 # Класс для услуг
 class Service(models.Model):

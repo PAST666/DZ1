@@ -455,6 +455,1176 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-10-05T04:27:45.805Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "УЗИ щитовидной железы и лимфатических узлов шеи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-10-05T04:28:44.469Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Дуплексное сканирование артерий верхних конечностей (правая или левая рука)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-10-05T04:29:06.457Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "УЗИ сустава - 1 зона: (коленный, локтевой, плечевой, лучезапястный)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-10-05T04:29:40.915Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-10-05T04:29:53.256Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "УЗИ периферических нервов (1 зона)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-10-05T04:30:09.286Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Дуплексное сканирование аорты и ее висцеральных ветвей)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-10-05T04:30:27.241Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Дуплексное сканирование вен нижних конечностей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-10-05T04:30:45.880Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Дуплексное сканирование артерий нижних конечностей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-10-05T04:31:34.012Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "30",
+    "object_repr": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА) у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-10-05T04:31:58.569Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "31",
+    "object_repr": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансабдоминально)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-10-05T04:32:15.090Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "32",
+    "object_repr": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-10-05T04:32:37.084Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "УЗИ комплекс \"Женское здоровье\": щитовидной железы, молочных желез, органов МТ(трансабдом/трансрект)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-10-05T04:34:52.815Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "34",
+    "object_repr": "УЗИ у детей в 1 мес (скрининг-комплекс \"Я родился\"):бр.полость, почки, нейросонография, тазоб.суст.)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-10-05T04:35:10.328Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "35",
+    "object_repr": "УЗИ артерий почек с дуплексным сканированием",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-10-05T04:35:23.964Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "36",
+    "object_repr": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-10-05T04:36:26.859Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "УЗИ щитовидной железы и паращитовидных желез",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-10-05T04:36:58.609Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "УЗИ плевральной полости",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-10-05T04:37:54.704Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "УЗИ щитовидной железы и паращитовидных желез у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-10-05T04:38:43.549Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "УЗИ мочевого пузыря с определением остаточного объема мочи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-10-05T04:39:09.267Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "УЗИ слюнных желез (подъязычных, подчелюстных, околоушных)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-10-05T04:40:16.542Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "УЗИ грудных желез (мужчины)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-10-05T04:40:40.874Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "УЗИ мягких тканей (1 зона)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-10-05T04:40:55.853Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "УЗИ почек и надпочечников у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-10-05T04:41:16.721Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "12",
+    "object_repr": "УЗИ почек и надпочечников",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-10-05T04:41:39.822Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "13",
+    "object_repr": "УЗИ молочных желез",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-10-05T04:41:58.660Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "14",
+    "object_repr": "УЗИ мошонки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-10-05T04:42:35.467Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "15",
+    "object_repr": "УЗИ лимфатических узлов - 1 зона: (шейные, подмышечные, паховые, забрюшинные)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-10-05T04:42:59.266Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "16",
+    "object_repr": "УЗИ органов брюшной полости и почек у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-10-05T04:43:15.167Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "17",
+    "object_repr": "УЗИ тазобедренных суставов у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-10-05T04:43:36.032Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "18",
+    "object_repr": "УЗИ почек и мочевого пузыря",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-10-05T04:44:08.379Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "УЗИ органов брюшной полости (комплексное)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-10-05T04:44:08.388Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "УЗИ молочных желез",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-10-05T04:44:36.589Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "19",
+    "object_repr": "УЗИ органов брюшной полости (комплексное)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-10-05T04:45:06.350Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "20",
+    "object_repr": "УЗИ органов малого таза у женщин (комплексное)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-10-05T04:45:23.637Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "21",
+    "object_repr": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-10-05T04:46:09.999Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "22",
+    "object_repr": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у взрослых",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-10-05T04:46:24.824Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "23",
+    "object_repr": "Нейросонография у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-10-05T04:46:48.903Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "24",
+    "object_repr": "УЗИ органов малого таза при беременности (до 12 недель)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-10-05T04:47:10.700Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "25",
+    "object_repr": "УЗИ щитовидной железы и лимфатических узлов шеи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-10-05T04:47:35.640Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "26",
+    "object_repr": "Дуплексное сканирование артерий верхних конечностей (правая или левая рука)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-10-05T04:48:20.288Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "27",
+    "object_repr": "УЗИ сустава - 1 зона: (коленный, локтевой, плечевой, лучезапястный)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-10-05T04:48:49.597Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "28",
+    "object_repr": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-10-05T04:49:05.059Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "29",
+    "object_repr": "УЗИ периферических нервов (1 зона)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-10-05T04:49:23.030Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "30",
+    "object_repr": "Дуплексное сканирование аорты и ее висцеральных ветвей)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-10-05T04:49:45.802Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "31",
+    "object_repr": "Дуплексное сканирование вен нижних конечностей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-10-05T04:50:13.673Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "32",
+    "object_repr": "Дуплексное сканирование артерий нижних конечностей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2024-10-05T04:50:50.882Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "33",
+    "object_repr": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА) у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2024-10-05T04:51:11.182Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "34",
+    "object_repr": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансабдоминально)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2024-10-05T04:51:33.397Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "35",
+    "object_repr": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2024-10-05T04:52:36.499Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "36",
+    "object_repr": "УЗИ комплекс \"Женское здоровье\": щитовидной железы, молочных желез, органов МТ(трансабдом/трансвагинально)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2024-10-05T04:53:32.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "УЗИ комплекс \"Женское здоровье\": щитовидн железы, молочных желез, органов МТ(трансабдом/трансвагин)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2024-10-05T04:54:09.411Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "37",
+    "object_repr": "УЗИ у детей в 1 мес (скрининг-комплекс \"Я родился\"):бр.полость, почки, нейросонография, тазоб.суст.)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2024-10-05T04:54:27.640Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "38",
+    "object_repr": "УЗИ артерий почек с дуплексным сканированием",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2024-10-05T04:55:25.378Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "39",
+    "object_repr": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2024-10-05T04:56:16.393Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Ангелина Топычканова - 83012660088",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2024-10-05T04:56:28.880Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Здесь будет новый специалист - 83012660088",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2024-10-05T04:56:54.009Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "003",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2024-10-05T04:57:02.741Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "004",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2024-10-05T04:57:11.503Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "005",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2024-10-05T04:57:22.682Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "006",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2024-10-05T04:57:31.536Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "007",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2024-10-05T04:57:41.091Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "008",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2024-10-05T04:57:50.110Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "009",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2024-10-05T04:57:59.291Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "010",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2024-10-05T04:58:09.063Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "011",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2024-10-05T04:58:18.329Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "012",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2024-10-05T04:58:27.983Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "013",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2024-10-05T04:58:37.250Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "014",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2024-10-05T04:58:46.199Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "015",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2024-10-05T04:58:57.845Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "016",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2024-10-05T04:59:10.734Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "017",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2024-10-05T04:59:20.344Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "018",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2024-10-05T04:59:28.540Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "019",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2024-10-05T04:59:37.676Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "020",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2024-10-05T04:59:48.137Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "021",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2024-10-05T04:59:57.109Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "022",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2024-10-05T05:00:09.346Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "23",
+    "object_repr": "023",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2024-10-05T05:00:18.291Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "024",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2024-10-05T05:00:27.124Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "025",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2024-10-05T05:00:37.273Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "026",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2024-10-05T05:00:47.303Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "27",
+    "object_repr": "027",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2024-10-05T05:00:57.261Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "028",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2024-10-05T05:01:06.165Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "029",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2024-10-05T05:01:14.290Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "030",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2024-10-05T05:01:23.115Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "31",
+    "object_repr": "031",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2024-10-05T05:01:33.417Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "32",
+    "object_repr": "032",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2024-10-05T05:01:40.815Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "33",
+    "object_repr": "033",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2024-10-05T05:01:50.653Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "34",
+    "object_repr": "034",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2024-10-05T05:01:58.647Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "35",
+    "object_repr": "035",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2024-10-05T05:02:09.427Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "36",
+    "object_repr": "036",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -1062,9 +2232,7 @@
     "created_at": "2024-10-03T12:52:31.175Z",
     "status": 0,
     "master": 1,
-    "services": [
-      1
-    ]
+    "services": []
   }
 },
 {
@@ -1077,8 +2245,42 @@
     "address": "Улан-Удэ, Ленина, д.1, кв.1",
     "photo": "masters/photos/001_5CpzMi4.jpg",
     "services": [
-      1,
-      2
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
     ]
   }
 },
@@ -1098,7 +2300,97 @@
 },
 {
   "model": "cabinet.service",
-  "pk": 1,
+  "pk": 3,
+  "fields": {
+    "name": "УЗИ чего-то",
+    "description": "УЗИ чего-то",
+    "price": "0.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 4,
+  "fields": {
+    "name": "УЗИ щитовидной железы и паращитовидных желез",
+    "description": "УЗИ щитовидной железы и паращитовидных желез",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 5,
+  "fields": {
+    "name": "УЗИ плевральной полости",
+    "description": "УЗИ плевральной полости",
+    "price": "600.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 6,
+  "fields": {
+    "name": "УЗИ щитовидной железы и паращитовидных желез у детей",
+    "description": "УЗИ щитовидной железы и паращитовидных желез у детей",
+    "price": "800.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 7,
+  "fields": {
+    "name": "УЗИ мочевого пузыря с определением остаточного объема мочи",
+    "description": "УЗИ мочевого пузыря с определением остаточного объема мочи",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 8,
+  "fields": {
+    "name": "УЗИ слюнных желез (подъязычных, подчелюстных, околоушных)",
+    "description": "УЗИ слюнных желез (подъязычных, подчелюстных, околоушных)",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 9,
+  "fields": {
+    "name": "УЗИ грудных желез (мужчины)",
+    "description": "УЗИ грудных желез (мужчины)",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 10,
+  "fields": {
+    "name": "УЗИ мягких тканей (1 зона)",
+    "description": "УЗИ мягких тканей (1 зона)",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 11,
+  "fields": {
+    "name": "УЗИ почек и надпочечников у детей",
+    "description": "УЗИ почек и надпочечников у детей",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 12,
+  "fields": {
+    "name": "УЗИ почек и надпочечников",
+    "description": "УЗИ почек и надпочечников",
+    "price": "1200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 13,
   "fields": {
     "name": "УЗИ молочных желез",
     "description": "УЗИ молочных желез",
@@ -1107,7 +2399,52 @@
 },
 {
   "model": "cabinet.service",
-  "pk": 2,
+  "pk": 14,
+  "fields": {
+    "name": "УЗИ мошонки",
+    "description": "УЗИ мошонки",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 15,
+  "fields": {
+    "name": "УЗИ лимфатических узлов - 1 зона: (шейные, подмышечные, паховые, забрюшинные)",
+    "description": "УЗИ лимфатических узлов - 1 зона: (шейные, подмышечные, паховые, забрюшинные)",
+    "price": "1200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 16,
+  "fields": {
+    "name": "УЗИ органов брюшной полости и почек у детей",
+    "description": "УЗИ органов брюшной полости и почек у детей",
+    "price": "1200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 17,
+  "fields": {
+    "name": "УЗИ тазобедренных суставов у детей",
+    "description": "1200",
+    "price": "1200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 18,
+  "fields": {
+    "name": "УЗИ почек и мочевого пузыря",
+    "description": "УЗИ почек и мочевого пузыря",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 19,
   "fields": {
     "name": "УЗИ органов брюшной полости (комплексное)",
     "description": "УЗИ органов брюшной полости (комплексное)",
@@ -1116,11 +2453,182 @@
 },
 {
   "model": "cabinet.service",
-  "pk": 3,
+  "pk": 20,
   "fields": {
-    "name": "УЗИ чего-то",
-    "description": "УЗИ чего-то",
-    "price": "0.00"
+    "name": "УЗИ органов малого таза у женщин (комплексное)",
+    "description": "УЗИ органов малого таза у женщин (комплексное)",
+    "price": "1500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 21,
+  "fields": {
+    "name": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА)",
+    "description": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА)",
+    "price": "1500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 22,
+  "fields": {
+    "name": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у взрослых",
+    "description": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у взрослых",
+    "price": "1500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 23,
+  "fields": {
+    "name": "Нейросонография у детей",
+    "description": "Нейросонография у детей",
+    "price": "1500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 24,
+  "fields": {
+    "name": "УЗИ органов малого таза при беременности (до 12 недель)",
+    "description": "УЗИ органов малого таза при беременности (до 12 недель)",
+    "price": "1500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 25,
+  "fields": {
+    "name": "УЗИ щитовидной железы и лимфатических узлов шеи",
+    "description": "УЗИ щитовидной железы и лимфатических узлов шеи",
+    "price": "1600.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 26,
+  "fields": {
+    "name": "Дуплексное сканирование артерий верхних конечностей (правая или левая рука)",
+    "description": "Дуплексное сканирование артерий верхних конечностей (правая или левая рука)",
+    "price": "1600.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 27,
+  "fields": {
+    "name": "УЗИ сустава - 1 зона: (коленный, локтевой, плечевой, лучезапястный)",
+    "description": "УЗИ сустава - 1 зона: (коленный, локтевой, плечевой, лучезапястный)",
+    "price": "1800.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 28,
+  "fields": {
+    "name": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у детей",
+    "description": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у детей",
+    "price": "1800.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 29,
+  "fields": {
+    "name": "УЗИ периферических нервов (1 зона)",
+    "description": "УЗИ периферических нервов (1 зона)",
+    "price": "1800.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 30,
+  "fields": {
+    "name": "Дуплексное сканирование аорты и ее висцеральных ветвей)",
+    "description": "Дуплексное сканирование аорты и ее висцеральных ветвей)",
+    "price": "1900.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 31,
+  "fields": {
+    "name": "Дуплексное сканирование вен нижних конечностей",
+    "description": "Дуплексное сканирование вен нижних конечностей",
+    "price": "2000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 32,
+  "fields": {
+    "name": "Дуплексное сканирование артерий нижних конечностей",
+    "description": "Дуплексное сканирование артерий нижних конечностей",
+    "price": "2200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 33,
+  "fields": {
+    "name": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА) у детей",
+    "description": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА) у детей",
+    "price": "2200.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 34,
+  "fields": {
+    "name": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансабдоминально)",
+    "description": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансабдоминально)",
+    "price": "2400.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 35,
+  "fields": {
+    "name": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+    "description": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+    "price": "2500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 36,
+  "fields": {
+    "name": "УЗИ комплекс \"Женское здоровье\": щитовидной железы, молочных желез, органов МТ(трансабдом/трансвагинально)",
+    "description": "УЗИ комплекс \"Женское здоровье\": щитовидной железы, молочных желез, органов МТ(трансабдом/трансвагинально)",
+    "price": "3500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 37,
+  "fields": {
+    "name": "УЗИ у детей в 1 мес (скрининг-комплекс \"Я родился\"):бр.полость, почки, нейросонография, тазоб.суст.)",
+    "description": "УЗИ у детей в 1 мес (скрининг-комплекс \"Я родился\"):бр.полость, почки, нейросонография, тазоб.суст.)",
+    "price": "3000.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 38,
+  "fields": {
+    "name": "УЗИ артерий почек с дуплексным сканированием",
+    "description": "УЗИ артерий почек с дуплексным сканированием",
+    "price": "3500.00"
+  }
+},
+{
+  "model": "cabinet.service",
+  "pk": 39,
+  "fields": {
+    "name": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
+    "description": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
+    "price": "4900.00"
   }
 },
 {
@@ -1175,6 +2683,312 @@
     "name": "002",
     "description": "002",
     "photo": "review/photos/02.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 3,
+  "fields": {
+    "name": "003",
+    "description": "003",
+    "photo": "review/photos/03.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 4,
+  "fields": {
+    "name": "004",
+    "description": "004",
+    "photo": "review/photos/04.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 5,
+  "fields": {
+    "name": "005",
+    "description": "005",
+    "photo": "review/photos/05.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 6,
+  "fields": {
+    "name": "006",
+    "description": "006",
+    "photo": "review/photos/06.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 7,
+  "fields": {
+    "name": "007",
+    "description": "007",
+    "photo": "review/photos/07.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 8,
+  "fields": {
+    "name": "008",
+    "description": "008",
+    "photo": "review/photos/08.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 9,
+  "fields": {
+    "name": "009",
+    "description": "009",
+    "photo": "review/photos/09.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 10,
+  "fields": {
+    "name": "010",
+    "description": "010",
+    "photo": "review/photos/10.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 11,
+  "fields": {
+    "name": "011",
+    "description": "011",
+    "photo": "review/photos/11.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 12,
+  "fields": {
+    "name": "012",
+    "description": "012",
+    "photo": "review/photos/12.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 13,
+  "fields": {
+    "name": "013",
+    "description": "013",
+    "photo": "review/photos/13.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 14,
+  "fields": {
+    "name": "014",
+    "description": "014",
+    "photo": "review/photos/14.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 15,
+  "fields": {
+    "name": "015",
+    "description": "015",
+    "photo": "review/photos/15.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 16,
+  "fields": {
+    "name": "016",
+    "description": "016",
+    "photo": "review/photos/16.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 17,
+  "fields": {
+    "name": "017",
+    "description": "017",
+    "photo": "review/photos/17.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 18,
+  "fields": {
+    "name": "018",
+    "description": "018",
+    "photo": "review/photos/18.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 19,
+  "fields": {
+    "name": "019",
+    "description": "019",
+    "photo": "review/photos/19.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 20,
+  "fields": {
+    "name": "020",
+    "description": "020",
+    "photo": "review/photos/20.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 21,
+  "fields": {
+    "name": "021",
+    "description": "021",
+    "photo": "review/photos/21.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 22,
+  "fields": {
+    "name": "022",
+    "description": "022",
+    "photo": "review/photos/22.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 23,
+  "fields": {
+    "name": "023",
+    "description": "023",
+    "photo": "review/photos/23.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 24,
+  "fields": {
+    "name": "024",
+    "description": "024",
+    "photo": "review/photos/24.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 25,
+  "fields": {
+    "name": "025",
+    "description": "025",
+    "photo": "review/photos/25.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 26,
+  "fields": {
+    "name": "026",
+    "description": "026",
+    "photo": "review/photos/26.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 27,
+  "fields": {
+    "name": "027",
+    "description": "027",
+    "photo": "review/photos/27.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 28,
+  "fields": {
+    "name": "028",
+    "description": "028",
+    "photo": "review/photos/28.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 29,
+  "fields": {
+    "name": "029",
+    "description": "029",
+    "photo": "review/photos/29.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 30,
+  "fields": {
+    "name": "030",
+    "description": "030",
+    "photo": "review/photos/30.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 31,
+  "fields": {
+    "name": "031",
+    "description": "031",
+    "photo": "review/photos/31.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 32,
+  "fields": {
+    "name": "032",
+    "description": "032",
+    "photo": "review/photos/32.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 33,
+  "fields": {
+    "name": "033",
+    "description": "033",
+    "photo": "review/photos/33.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 34,
+  "fields": {
+    "name": "034",
+    "description": "034",
+    "photo": "review/photos/34.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 35,
+  "fields": {
+    "name": "035",
+    "description": "035",
+    "photo": "review/photos/35.jpg"
+  }
+},
+{
+  "model": "cabinet.review",
+  "pk": 36,
+  "fields": {
+    "name": "036",
+    "description": "036",
+    "photo": "review/photos/36.jpg"
   }
 },
 {
@@ -1343,6 +3157,126 @@
   "fields": {
     "name": "УЗИ органов малого таза при беременности (до 12 недель)",
     "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 22,
+  "fields": {
+    "name": "УЗИ щитовидной железы и лимфатических узлов шеи",
+    "price": 1600
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 23,
+  "fields": {
+    "name": "Дуплексное сканирование артерий верхних конечностей (правая или левая рука)",
+    "price": 1600
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 24,
+  "fields": {
+    "name": "УЗИ сустава - 1 зона: (коленный, локтевой, плечевой, лучезапястный)",
+    "price": 1800
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 25,
+  "fields": {
+    "name": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у детей",
+    "price": 1800
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 26,
+  "fields": {
+    "name": "УЗИ периферических нервов (1 зона)",
+    "price": 1800
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 27,
+  "fields": {
+    "name": "Дуплексное сканирование аорты и ее висцеральных ветвей)",
+    "price": 1900
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 28,
+  "fields": {
+    "name": "Дуплексное сканирование вен нижних конечностей",
+    "price": 2000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 29,
+  "fields": {
+    "name": "Дуплексное сканирование артерий нижних конечностей",
+    "price": 2200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 30,
+  "fields": {
+    "name": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА) у детей",
+    "price": 2200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 31,
+  "fields": {
+    "name": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансабдоминально)",
+    "price": 2400
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 32,
+  "fields": {
+    "name": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+    "price": 2500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 33,
+  "fields": {
+    "name": "УЗИ комплекс \"Женское здоровье\": щитовидн железы, молочных желез, органов МТ(трансабдом/трансвагин)",
+    "price": 3500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 34,
+  "fields": {
+    "name": "УЗИ у детей в 1 мес (скрининг-комплекс \"Я родился\"):бр.полость, почки, нейросонография, тазоб.суст.)",
+    "price": 3000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 35,
+  "fields": {
+    "name": "УЗИ артерий почек с дуплексным сканированием",
+    "price": 3500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 36,
+  "fields": {
+    "name": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
+    "price": 4900
   }
 }
 ]
