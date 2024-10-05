@@ -208,6 +208,253 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-10-05T04:07:16.466Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "УЗИ щитовидной железы и паращитовидных желез",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-10-05T04:07:54.006Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "УЗИ мочевого пузыря с определением остаточного объема мочи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-10-05T04:08:12.703Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "УЗИ слюнных желез (подъязычных, подчелюстных, околоушных)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-10-05T04:08:38.349Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "УЗИ грудных желез (мужчины)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-10-05T04:08:52.020Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "УЗИ мягких тканей (1 зона)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-10-05T04:09:07.864Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "УЗИ почек и надпочечников у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-10-05T04:09:23.070Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "УЗИ почек и надпочечников",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-10-05T04:09:37.464Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "УЗИ молочных желез",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-10-05T04:09:48.762Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "УЗИ мошонки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-10-05T04:10:39.621Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "УЗИ лимфатических узлов - 1 зона: (шейные, подмышечные, паховые, забрюшинные)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-10-05T04:11:05.144Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "УЗИ органов брюшной полости и почек у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-10-05T04:11:27.811Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "УЗИ тазобедренных суставов у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-10-05T04:11:41.129Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "УЗИ почек и мочевого пузыря",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-10-05T04:11:57.160Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "УЗИ органов брюшной полости (комплексное)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-10-05T04:12:26.324Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "УЗИ органов малого таза у женщин (комплексное)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-10-05T04:12:45.116Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-10-05T04:13:15.912Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у взрослых",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-10-05T04:13:29.344Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Нейросонография у детей",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-10-05T04:13:51.790Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "УЗИ органов малого таза при беременности (до 12 недель)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -944,6 +1191,158 @@
   "fields": {
     "name": "УЗИ щитовидной железы и паращитовидных желез у детей",
     "price": 800
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 3,
+  "fields": {
+    "name": "УЗИ щитовидной железы и паращитовидных желез",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 4,
+  "fields": {
+    "name": "УЗИ мочевого пузыря с определением остаточного объема мочи",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 5,
+  "fields": {
+    "name": "УЗИ слюнных желез (подъязычных, подчелюстных, околоушных)",
+    "price": 1400
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 6,
+  "fields": {
+    "name": "УЗИ грудных желез (мужчины)",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 7,
+  "fields": {
+    "name": "УЗИ мягких тканей (1 зона)",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 8,
+  "fields": {
+    "name": "УЗИ почек и надпочечников у детей",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 9,
+  "fields": {
+    "name": "УЗИ почек и надпочечников",
+    "price": 1200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 10,
+  "fields": {
+    "name": "УЗИ молочных желез",
+    "price": 1200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 11,
+  "fields": {
+    "name": "УЗИ мошонки",
+    "price": 1000
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 12,
+  "fields": {
+    "name": "УЗИ лимфатических узлов - 1 зона: (шейные, подмышечные, паховые, забрюшинные)",
+    "price": 1200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 13,
+  "fields": {
+    "name": "УЗИ органов брюшной полости и почек у детей",
+    "price": 1200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 14,
+  "fields": {
+    "name": "УЗИ тазобедренных суставов у детей",
+    "price": 1200
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 15,
+  "fields": {
+    "name": "УЗИ почек и мочевого пузыря",
+    "price": 1400
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 16,
+  "fields": {
+    "name": "УЗИ органов брюшной полости (комплексное)",
+    "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 17,
+  "fields": {
+    "name": "УЗИ органов малого таза у женщин (комплексное)",
+    "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 18,
+  "fields": {
+    "name": "Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий (УЗДГ БЦА)",
+    "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 19,
+  "fields": {
+    "name": "УЗИ органов брюшной полости с определением сократительной функции желчного пузыря у взрослых",
+    "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 20,
+  "fields": {
+    "name": "Нейросонография у детей",
+    "price": 1500
+  }
+},
+{
+  "model": "cabinet.price",
+  "pk": 21,
+  "fields": {
+    "name": "УЗИ органов малого таза при беременности (до 12 недель)",
+    "price": 1500
   }
 }
 ]
