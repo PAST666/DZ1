@@ -168,7 +168,7 @@ class ThanksView (View):
         }
         return render (request, 'cabinet/thanks_page.html', context)
 
-class DeleteView (View):
+class Delete_View (View):
     def get (self, request):
         context= {
         "page_alias": "thanks_page",

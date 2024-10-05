@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from cabinet.views import main, price, AppointmentView, license, gallery, preparation, reviews, ThanksView, DeleteView, get_services_by_master
+from cabinet.views import main, price, AppointmentView, license, gallery, preparation, reviews, ThanksView, Delete_View, get_services_by_master
 from django.conf import settings
 from django.conf.urls.static import static
 from cabinet.views import (
@@ -20,7 +20,7 @@ urlpatterns = [
     path("preparation/", preparation, name="preparation"),
     path("reviews/", reviews, name="reviews"),
     path("thanks_page/", ThanksView.as_view(), name="thanks_page"),
-    path("delete_page/", DeleteView.as_view(), name="delete_page"),
+    path("delete_page/", Delete_View.as_view(), name="delete_page"),
     path("get_services_by_master/<int:master_id>/", get_services_by_master,
     name="get_services_by_master"),
     path("visit_add/", VisitCreateView.as_view(), name="visit_form"),
