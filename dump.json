@@ -1677,6 +1677,19 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2024-10-06T12:35:47.443Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "снаружи",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0413\\u0430\\u043b\\u0435\\u0440\\u0435\\u044f\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -2694,7 +2707,7 @@
   "fields": {
     "name": "снаружи",
     "description": "снаружи",
-    "photo": "gallery/photos/Снаружи_986uTrH.jpg"
+    "photo": "gallery/photos/Снаружи2.jpg"
   }
 },
 {
