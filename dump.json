@@ -1625,6 +1625,45 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2024-10-06T07:17:38.790Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Ангелина Владимировна Топычканова - 83012660088",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2024-10-06T07:19:11.869Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "новый специалист Здесь будет - 83012660088",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2024-10-06T07:21:30.774Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Вова - 89991112233",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -2223,23 +2262,10 @@
   }
 },
 {
-  "model": "cabinet.visit",
-  "pk": 1,
-  "fields": {
-    "name": "Вова",
-    "phone": "89991112233",
-    "comment": "Хочу на УЗИ!",
-    "created_at": "2024-10-03T12:52:31.175Z",
-    "status": 0,
-    "master": 1,
-    "services": []
-  }
-},
-{
   "model": "cabinet.master",
   "pk": 1,
   "fields": {
-    "first_name": "Ангелина",
+    "first_name": "Ангелина Владимировна",
     "last_name": "Топычканова",
     "phone": "83012660088",
     "address": "Улан-Удэ, Ленина, д.1, кв.1",
@@ -2288,8 +2314,8 @@
   "model": "cabinet.master",
   "pk": 2,
   "fields": {
-    "first_name": "Здесь будет",
-    "last_name": "новый специалист",
+    "first_name": "новый специалист",
+    "last_name": "Здесь будет",
     "phone": "83012660088",
     "address": "Улан-Удэ, Пугачева, д.10, кв.10",
     "photo": "masters/photos/Специалист_faOWzQN.jpg",
