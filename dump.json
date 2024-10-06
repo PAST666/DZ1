@@ -1664,6 +1664,19 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2024-10-06T12:21:19.107Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Ангелина Владимировна Топычканова - 83012660088",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\"]}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -2269,7 +2282,7 @@
     "last_name": "Топычканова",
     "phone": "83012660088",
     "address": "Улан-Удэ, Ленина, д.1, кв.1",
-    "photo": "masters/photos/001_5CpzMi4.jpg",
+    "photo": "masters/photos/0001.jpg",
     "services": [
       4,
       5,
