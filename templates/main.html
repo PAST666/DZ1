@@ -60,7 +60,7 @@
                   <div class="carousel-item {% if forloop.first %}active{% endif %}">
                     <img src="{{ master.photo.url }}" class="d-block w-100" alt="{{ master.first_name }} {{ master.last_name }}">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5 id="masterphoto">{{ master.first_name }} {{ master.last_name }}</h5>
+                      <h5 id="masterphoto">{{ master.last_name }} {{ master.first_name }}</h5>
                     </div>
                   </div>
                 {% endfor %}
