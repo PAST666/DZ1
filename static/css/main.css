@@ -22,6 +22,7 @@ p {
 
 #div-header {
     display: flex;
+    flex-wrap: wrap;
 }
 #mesto {
     display: flex;
@@ -38,37 +39,15 @@ p {
     font-size: larger
 
 }
-#main-block-01 {
-    flex: 1;
-    max-width: 33.33%;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    background:linear-gradient(white,rgb(127, 127, 127));
-}
-#main-block-02
-{
-    flex: 1;
-    max-width: 33.33%;
-    text-align: left;
-    font-size: larger;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 20px;
-    background:linear-gradient(white,rgb(127, 127, 127));
-}
+#main-block-01,
+#main-block-02,
 #main-block-03 {
-    flex: 1;
-    max-width: 33.33%;
-    text-align: center;
+    width: 30.33%;
     margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
     margin-bottom: 20px;
-    background:linear-gradient(white,rgb(127, 127, 127));
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    background: linear-gradient(white, rgb(127, 127, 127));
 }
 #masterphoto {
     color: black;
@@ -133,4 +112,20 @@ p {
     .map-container {
         height: 200px;
     }
+    #main-block-01,
+    #main-block-02,
+    #main-block-03 {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+#main-block-01,
+#main-block-03 {
+    text-align: center;
+}
+
+#main-block-02 {
+    text-align: left;
+    font-size: larger;
 }
