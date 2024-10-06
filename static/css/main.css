@@ -61,6 +61,7 @@ p {
 }
 #masterphoto {
     color: black;
+    font-size: xx-large;
 }
 .map-container {
     width: 100%;
@@ -85,7 +86,7 @@ p {
 }
 
 .carousel-inner {
-    max-height: 600px;
+    max-height: 950px;
 }
 
 .carousel-item img {
