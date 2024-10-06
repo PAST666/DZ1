@@ -38,7 +38,7 @@ p {
     font-size: larger
 
 }
-#main-block-01, #main-block-03 {
+#main-block-01 {
     flex: 1;
     max-width: 33.33%;
     text-align: center;
@@ -46,18 +46,29 @@ p {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 20px;
+    background:linear-gradient(white,rgb(127, 127, 127));
 }
 #main-block-02
 {
     flex: 1;
     max-width: 33.33%;
     text-align: left;
-    font-size: medium;
+    font-size: larger;
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 20px;
-    background-color: rgb(204, 204, 204);
+    background:linear-gradient(white,rgb(127, 127, 127));
+}
+#main-block-03 {
+    flex: 1;
+    max-width: 33.33%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    background:linear-gradient(white,rgb(127, 127, 127));
 }
 #masterphoto {
     color: black;
