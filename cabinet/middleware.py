@@ -11,8 +11,8 @@ class VisitorTrackingMiddleware:
             session_id = request.session.session_key
 
         visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
-        if created:
-            visitor.save()
+        visitor.views += 1
+        visitor.save()
         
         response = self.get_response(request)
         return response
