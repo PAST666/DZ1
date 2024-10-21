@@ -47,5 +47,5 @@ class PriceAdmin(admin.ModelAdmin):
 
 @admin.register(SiteVisitor)
 class SiteVisitorAdmin(admin.ModelAdmin):
-    list_display = ('session_id', 'visited_at', 'views')
-    readonly_fields = ('session_id', 'visited_at', 'views')
+    list_display = ('session_id', 'first_visited_at', 'last_visited_at', 'views')
+    readonly_fields = ('session_id', 'first_visited_at', 'last_visited_at', 'views')

@@ -1,6 +1,7 @@
 from tabnanny import verbose
 from django.db import models
 from django.views.generic import ListView
+from django.utils import timezone
 
 # class Order(models.Model):
 #     order_dt = models.DateTimeField(auto_now=True)
@@ -120,7 +121,8 @@ class Price(models.Model):
 
 class SiteVisitor(models.Model):
     session_id = models.CharField(max_length=255, unique=True)
-    visited_at = models.DateTimeField(auto_now_add=True)
+    first_visited_at = models.DateTimeField(auto_now_add=True)
+    last_visited_at = models.DateTimeField(auto_now=True)
     views = models.IntegerField(default=0, verbose_name="Просмотры")
 
     def __str__(self):

@@ -1,3 +1,5 @@
+from django.utils import timezone
+from datetime import timedelta
 from .models import SiteVisitor
 
 class VisitorTrackingMiddleware:
@@ -11,7 +13,12 @@ class VisitorTrackingMiddleware:
             session_id = request.session.session_key
 
         visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
-        visitor.views += 1
+        
+        # Увеличиваем счетчик только если прошло более 30 минут с последнего визита
+        if created or (timezone.now() - visitor.last_visited_at) > timedelta(minutes=30):
+            visitor.views += 1
+        
+        visitor.last_visited_at = timezone.now()
         visitor.save()
         
         response = self.get_response(request)
