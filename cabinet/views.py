@@ -203,11 +203,11 @@ class VisitDeleteView(DeleteView):
     success_url = reverse_lazy("delete_page")
     pk_url_kwarg= "pk"
 
-def track_visitor(request):
-    session_id = request.session.session_key
-    if not session_id:
-        request.session.save()
-        session_id = request.session.session_key
-    visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
-    if created:
-        visitor.save()
+# def track_visitor(request):
+#     session_id = request.session.session_key
+#     if not session_id:
+#         request.session.save()
+#         session_id = request.session.session_key
+#     visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
+#     if created:
+#         visitor.save()
