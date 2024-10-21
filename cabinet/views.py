@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 # from datetime import datetime
 # from .models import Order
 from .forms import VisitModelForm, VisitEditModelForm
-from .models import Visit, Master, License, Gallery, Review, Price
+from .models import Visit, Master, License, Gallery, Review, Price, SiteVisitor
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.views.generic import View
@@ -202,3 +202,12 @@ class VisitDeleteView(DeleteView):
     model = Visit
     success_url = reverse_lazy("delete_page")
     pk_url_kwarg= "pk"
+
+def track_visitor(request):
+    session_id = request.session.session_key
+    if not session_id:
+        request.session.save()
+        session_id = request.session.session_key
+    visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
+    if created:
+        visitor.save()
