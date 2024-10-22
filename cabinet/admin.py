@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils import timezone
 # from .models import Order
 
 # admin.site.register(Order)
@@ -47,5 +48,13 @@ class PriceAdmin(admin.ModelAdmin):
 
 @admin.register(SiteVisitor)
 class SiteVisitorAdmin(admin.ModelAdmin):
-    list_display = ('session_id', 'first_visited_at', 'last_visited_at', 'views')
-    readonly_fields = ('session_id', 'first_visited_at', 'last_visited_at', 'views')
+    list_display = ('session_id', 'buryatia_first_visit', 'buryatia_last_visit', 'views')
+    readonly_fields = ('session_id', 'buryatia_first_visit', 'buryatia_last_visit', 'views')
+
+    def buryatia_first_visit(self, obj):
+        return (obj.first_visited_at + timezone.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+    buryatia_first_visit.short_description = "Время первого посещения"
+
+    def buryatia_last_visit(self, obj):
+        return (obj.last_visited_at + timezone.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+    buryatia_last_visit.short_description = "Время последнего посещения"

@@ -121,10 +121,14 @@ class Price(models.Model):
 
 class SiteVisitor(models.Model):
     session_id = models.CharField(max_length=255, unique=True)
-    first_visited_at = models.DateTimeField(auto_now_add=True)
-    last_visited_at = models.DateTimeField(auto_now=True)
+    first_visited_at = models.DateTimeField(verbose_name="Время первого посещения", default=timezone.now)
+    last_visited_at = models.DateTimeField(verbose_name="Время последнего посещения", default=timezone.now)
     views = models.IntegerField(default=0, verbose_name="Просмотры")
 
     def __str__(self):
         return f"{self.session_id} - Просмотры: {self.views}"
+    
+    class Meta:
+        verbose_name = "Посетитель сайта"
+        verbose_name_plural = "Посетители сайта"
         
