@@ -15,7 +15,7 @@ class VisitorTrackingMiddleware:
         visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
         
         # Увеличиваем счетчик только если прошло более 30 минут с последнего визита
-        if created or (timezone.now() - visitor.last_visited_at) > timedelta(minutes=30):
+        if created or (timezone.now() - visitor.last_visited_at) > timedelta(hours=24):
             visitor.views += 1
         
         visitor.last_visited_at = timezone.now()
