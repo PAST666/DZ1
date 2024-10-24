@@ -2,6 +2,7 @@ from tabnanny import verbose
 from django.db import models
 from django.views.generic import ListView
 from django.utils import timezone
+from datetime import timedelta
 
 # class Order(models.Model):
 #     order_dt = models.DateTimeField(auto_now=True)
@@ -124,6 +125,13 @@ class SiteVisitor(models.Model):
     first_visited_at = models.DateTimeField(verbose_name="Время первого посещения", default=timezone.now)
     last_visited_at = models.DateTimeField(verbose_name="Время последнего посещения", default=timezone.now)
     views = models.IntegerField(default=0, verbose_name="Просмотры")
+
+    def update_visit(self):
+        now=timezone.now()
+        if (now - self.last_visited_at) > timedelta(minutes=5):
+            self.views +=1
+            self.last_visited_at = now
+            self.save()
 
     def __str__(self):
         return f"{self.session_id} - Просмотры: {self.views}"
