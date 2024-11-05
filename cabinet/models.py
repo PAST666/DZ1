@@ -51,7 +51,7 @@ class Master(models.Model):
     services = models.ManyToManyField('Service', related_name='masters', verbose_name='Услуги')
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} - {self.phone}'
+        return f'{self.first_name} {self.last_name}'
     
     class Meta:
         verbose_name = "Врач"

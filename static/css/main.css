@@ -2,11 +2,21 @@
 .container {
     display: flex;
     justify-content: center;
+    
 
 }
 body {    
-    background:linear-gradient(white,rgb(127, 127, 127));
     text-align: justify;
+    background-image: url("../images/bg-image-main.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+
+#textcolor {
+    color: white;
 }
 h5 {
     color: rgb(187, 247, 84);
@@ -47,7 +57,7 @@ p {
     margin-bottom: 20px;
     margin-left: 1.5%;
     margin-right: 1.5%;
-    background: linear-gradient(white, rgb(127, 127, 127));
+    background: linear-gradient(rgb(210, 231, 252), rgb(79, 159, 250));
 }
 #masterphoto {
     color: black;
@@ -100,13 +110,22 @@ p {
 }
 
 @media (max-width: 768px) {
+    #masterphoto {
+        font-size: medium; /* Размер для мобильных устройств */
+    }
     .carousel-half-width {
-        width: 100%;
-        max-width: 100%;
+        width: 70%;
+        max-width: 70%;
     }
 
     .carousel-inner {
-        max-height: 400px;
+        max-height: none;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto; /* Позволяет изображению сохранять пропорции */
+        object-fit: contain; /* Меняем cover на contain */
     }
     
     .map-container {

@@ -1,9 +1,17 @@
 body {
-    background-color: rgb(205, 205, 205);
+    background-image: url("../images/bg-image-appointment.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
 }
 p {
     font-size: larger;
 }
 .text-center {
     font-size: medium;
+}
+.form-control {
+    border: 2px solid black;
 }

@@ -468,11 +468,47 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add site visitor",
+    "content_type": 14,
+    "codename": "add_sitevisitor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change site visitor",
+    "content_type": 14,
+    "codename": "change_sitevisitor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete site visitor",
+    "content_type": 14,
+    "codename": "delete_sitevisitor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view site visitor",
+    "content_type": 14,
+    "codename": "view_sitevisitor"
+  }
+},
+{
   "model": "auth.user",
   "pk": 3,
   "fields": {
     "password": "pbkdf2_sha256$720000$E0rfD4cM5KK35jiOwkBWa9$dLN8bFyKVpUjq368M/lkqjd/GxKfvMWf/ZM+VMj6VX8=",
-    "last_login": null,
+    "last_login": "2024-11-03T09:32:32.581Z",
     "is_superuser": true,
     "username": "admin2",
     "first_name": "",
@@ -587,6 +623,54 @@
   "fields": {
     "app_label": "cabinet",
     "model": "visit"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "cabinet",
+    "model": "sitevisitor"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6tjflsw5lq0w9dz1lbneem9715ccjmb5",
+  "fields": {
+    "session_data": "e30:1t8JoY:LWWJL76oXcbtzFn0G-tbDEI32GnGotrch9IM9v80pGk",
+    "expire_date": "2024-11-19T13:41:46.813Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "87nba40h1fhxgdeyp0r0p9wqqntc4p20",
+  "fields": {
+    "session_data": "e30:1t32FG:y5MElC_TTeGvYDLC4xM6qbiP4uf_7DLaNrzVMtZNWmg",
+    "expire_date": "2024-11-04T23:55:30.280Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dpdsk6eezzszj3hdgjdsmwxdh6vp7kbz",
+  "fields": {
+    "session_data": "e30:1t32Gs:KYfeworQw2eak9oChsXvDqoPzXWGAlDsm1Wy9JJKSk0",
+    "expire_date": "2024-11-04T23:57:10.968Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nkn7y2tuqvf9pjo3l4nxoii868lra4rj",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1t7WyG:JrwGA7Evdc7NrjbAHI_0luNGUKcD5kCpGJ7f8HDenS4",
+    "expire_date": "2024-11-17T09:32:32.590Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pltj84ji0vjpy4mens2kmqyenkhu5601",
+  "fields": {
+    "session_data": "e30:1t32FH:ik3O_ElaAwAfSVTDokYuO4kLnUOMxL882oeMyqH08KI",
+    "expire_date": "2024-11-04T23:55:31.004Z"
   }
 },
 {
@@ -1631,6 +1715,56 @@
   "fields": {
     "name": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
     "price": 4900
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 3,
+  "fields": {
+    "session_id": "rn1p192e2jjjheyuooswnywymmayj6ku",
+    "first_visited_at": "2024-10-21T14:48:18.449Z",
+    "last_visited_at": "2024-10-21T23:57:04.417Z",
+    "views": 3
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 4,
+  "fields": {
+    "session_id": "p6kqj3b2k3b0k2aiy6daqp85z3c2kvqb",
+    "first_visited_at": "2024-10-21T15:12:10.160Z",
+    "last_visited_at": "2024-10-29T10:39:02.184Z",
+    "views": 13
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 5,
+  "fields": {
+    "session_id": "dpdsk6eezzszj3hdgjdsmwxdh6vp7kbz",
+    "first_visited_at": "2024-10-21T23:57:10.874Z",
+    "last_visited_at": "2024-10-21T23:57:16.167Z",
+    "views": 1
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 6,
+  "fields": {
+    "session_id": "nkn7y2tuqvf9pjo3l4nxoii868lra4rj",
+    "first_visited_at": "2024-11-05T13:14:19.141Z",
+    "last_visited_at": "2024-11-05T15:01:20.859Z",
+    "views": 19
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 7,
+  "fields": {
+    "session_id": "6tjflsw5lq0w9dz1lbneem9715ccjmb5",
+    "first_visited_at": "2024-11-05T13:41:46.803Z",
+    "last_visited_at": "2024-11-05T13:41:46.803Z",
+    "views": 1
   }
 }
 ]

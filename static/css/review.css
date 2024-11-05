@@ -3,9 +3,18 @@
     justify-content: center;
 }
 body {
-    background-color: rgb(205, 205, 205);
+    background-image: url("../images/bg-image-reviews.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
 }
 #pagination {
     display: flex;
     justify-content: center;
+}
+
+.img-fluid {
+    box-shadow: 0 0 20px 0 rgb(107, 80, 80);
 }
