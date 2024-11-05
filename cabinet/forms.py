@@ -7,8 +7,8 @@ class VisitModelForm(forms.ModelForm):
         model = Visit
         fields = ['name', 'phone', 'comment', 'master', 'services']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Имя', 'class': 'form-control'}),
-            'phone': forms.TextInput(attrs={'type': 'tel', 'placeholder': 'Номер телефона', 'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Ваше имя', 'class': 'form-control'}),
+            'phone': forms.TextInput(attrs={'type': 'tel', 'placeholder': 'Номер телефона (начинается с +7 или 8, длина 10 знаков)', 'class': 'form-control'}),
             'comment': forms.Textarea(attrs={'placeholder': 'Комментарий', 'class': 'form-control'}),
             'master': forms.Select(attrs={'class': 'form-control'}),
             'services': forms.SelectMultiple(attrs={'class': 'form-control'}),
