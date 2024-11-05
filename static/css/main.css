@@ -58,6 +58,7 @@ p {
     margin-left: 1.5%;
     margin-right: 1.5%;
     background: linear-gradient(rgb(210, 231, 252), rgb(79, 159, 250));
+    border-radius: 15px;
 }
 #masterphoto {
     color: black;
@@ -150,6 +151,7 @@ p {
 }
 #holidays {
     text-align: center;
-    background-color: red; 
+    background-color: red;
+    border-radius: 15px; 
 
 }
