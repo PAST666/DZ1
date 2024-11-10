@@ -2,54 +2,53 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Отзывы</title>
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/review.css' %}" />
-    {% endblock %}
-</head>
-<body>
-    {% block content %}
-    <div class="container-fluid px-4">
-        <div class="row">
-            <div class="col-12 mt-4 mb-4">
-                {% for i in page_obj %}
-                <div class="mb-4">
-                    <img src="{{ i.photo.url }}" class="img-fluid" alt="Reviews">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Отзывы</title>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+            <link rel="stylesheet" href="{% static 'css/review.css' %}" />
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-12 mt-4 mb-4">
+                    {% for i in page_obj %}
+                    <div class="mb-4">
+                        <img src="{{ i.photo.url }}" class="img-fluid" alt="Reviews">
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-    </div>
-    <nav id="pagination" class="list-pages">
-        <ul class="pagination">
-            {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
-            {% endif %}
-    
-            {% for p in page_obj.paginator.page_range %}
-                <li class="page-item {% if page_obj.number == p %}active{% endif %}">
-                    <a class="page-link" href="?page={{ p }}">{{ p }}</a>
-                </li>
-            {% endfor %}
-    
-            {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endblock %}
-    {% block footer %}
-    <footer>
-        <div class="container-xl">
-            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-            <p class="text-center">Автор: @alextopdpu</p>
-        </div>
-    </footer>
-    {% endblock %} 
-
-</body>
+        <nav id="pagination" class="list-pages">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                {% endif %}
+        
+                {% for p in page_obj.paginator.page_range %}
+                    <li class="page-item {% if page_obj.number == p %}active{% endif %}">
+                        <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endblock %}
+        {% block footer %}
+        <footer>
+            <div class="container-xl">
+                <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+                <p class="text-center">Автор: @alextopdpu</p>
+            </div>
+        </footer>
+        {% endblock %}
+    </body>
 </html>

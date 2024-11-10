@@ -1,10 +1,5 @@
 from django.contrib import admin
-from django.utils import timezone
-# from .models import Order
-
-# admin.site.register(Order)
-# Register your models here.
-from .models import Visit, Master, Service, License, Gallery, Review, Price, SiteVisitor
+from .models import Visit, Master, Service, License, Gallery, Review, Price
 
 @admin.register(Visit)
 class VisitAdmin(admin.ModelAdmin):
@@ -45,16 +40,3 @@ class ReviewAdmin(admin.ModelAdmin):
 class PriceAdmin(admin.ModelAdmin):
     list_display = ('name', 'price',)
     search_fields = ('name', 'price')
-
-@admin.register(SiteVisitor)
-class SiteVisitorAdmin(admin.ModelAdmin):
-    list_display = ('session_id', 'buryatia_first_visit', 'buryatia_last_visit', 'views')
-    readonly_fields = ('session_id', 'buryatia_first_visit', 'buryatia_last_visit', 'views')
-
-    def buryatia_first_visit(self, obj):
-        return (obj.first_visited_at + timezone.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-    buryatia_first_visit.short_description = "Время первого посещения"
-
-    def buryatia_last_visit(self, obj):
-        return (obj.last_visited_at + timezone.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-    buryatia_last_visit.short_description = "Время последнего посещения"

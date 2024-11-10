@@ -14,4 +14,22 @@ p {
 }
 .form-control {
     border: 2px solid black;
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-control {
+        width: 100%;
+    }
+    
+    /* Дополнительно можно добавить стили для других элементов формы */
+    #orderForm form {
+        width: 100%;
+    }
+    
+    #orderForm select,
+    #orderForm input,
+    #orderForm textarea {
+        width: 100%;
+    }
 }

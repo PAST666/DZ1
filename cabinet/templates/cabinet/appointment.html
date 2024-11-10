@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Записаться на прием</title>
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/appointment.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/appointment.css' %}" />
     {% endblock %}
 </head>
 <body>
@@ -70,57 +70,7 @@
             setupServiceSelectListener();
         });
         </script>
-    {% endblock %}  
-    {% comment %} {% block content %}
-        <section>
-            <div class="container class_form">
-                <h1 class="text-3">Оставь заявку и получи услугу</h1>
-                <h3>{{ step }}</h3>
-
-                <div class="row justify-content-center">
-                    {% if step_1 %}
-                    <form action="{% url "appointment" %}" method="GET" style="width: 25%;">                        
-                        <label for="start">Выберите дату:</label>
-                            <input type="date" id="start" name="date" value="{{ min_day_value }}"
-                            min="{{ min_day_value }}" max="2025-09-01">
-                        <div style="float:right;" class="form-group row">
-                            <button type="submit" class="btn btn-success">Далее</button>
-                        </div>
-                    </form>
-                    {% endif %}
-                    {% if step_2 %}
-                    <form action="{% url "thanks_page" %}" method="POST" style="width: 50%;">
-                        {% csrf_token %}
-                        <label for="start">Выберите доступное время:</label>
-                        <select id="select" name="time" class="form-select form-select-lg mb-3" aria-label=".form-select-lg extends">
-                            {% for time in all_time %}
-                                <option value="{{ time }}">{{ time }}</option>
-                            {% endfor %}
-                        </select>
-                        
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label><br>
-                            <input type="text" value="" name="name" class="form-control">
-                            <div class=""></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Телефон</label><br>
-                            <input type="text" value="" name="phone" class="form-control">
-                            <div class=""></div>
-                        </div>
-                        <input type="hidden" name = "date" value="{{ choised_day }}">
-                        <div style="float:left;" class="form-group row">
-                            <a href="{% url "appointment" %}" type="submit" class="btn btn-danger">Выбрать другую дату</a>
-                        </div>
-                        <div style="float:right;" class="form-group row">
-                            <button type="submit" class="btn btn-success">Оставить заявку</button>
-                        </div>                        
-                    </form> 
-                    {% endif %}                    
-                </div>
-            </div>
-        </section>
-    {% endblock %}    {% endcomment %}
+    {% endblock %}
     {% block footer %}
     <footer>
         <div class="container-xl">

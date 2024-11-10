@@ -127,7 +127,7 @@ p {
     .carousel-item img {
         width: 100%;
         height: auto; /* Позволяет изображению сохранять пропорции */
-        object-fit: contain; /* Меняем cover на contain */
+        object-fit: contain;
     }
     
     .map-container {
