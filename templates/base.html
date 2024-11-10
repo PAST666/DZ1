@@ -36,6 +36,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/tomorrow-night-bright.min.css"
     />
+    {% comment %} <link rel="stylesheet" href="{% static 'css/base.css' %}" /> {% endcomment %}
     {% block css %}
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
     {% endblock %}
@@ -68,6 +69,7 @@
               <h5>Мы на карте</h5>
               <div class="map-container">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2e03bb2e43c28a96605d245eabe3f0447834a71fd476f6a4f051811c280726ba&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+                {% comment %} <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e03bb2e43c28a96605d245eabe3f0447834a71fd476f6a4f051811c280726ba&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe> {% endcomment %}
               </div>
             </div>
           </div>
@@ -83,6 +85,7 @@
       <script>
         hljs.highlightAll();
       </script>
+      {% comment %} <script src="{% static 'js/add_img_class.js' %}"></script> {% endcomment %}
       {% block scripts %}{% endblock %}
   </body>
 </html>

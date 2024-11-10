@@ -1,7 +1,22 @@
 from tabnanny import verbose
 from django.db import models
 from django.views.generic import ListView
+from django.utils import timezone
+from datetime import timedelta
 
+# class Order(models.Model):
+#     order_dt = models.DateTimeField(auto_now=True)
+#     order_name = models.CharField(max_length=200, verbose_name="Имя")
+#     order_phone = models.CharField(max_length=200, verbose_name="Телефон")
+#     order_day = models.DateField()
+#     order_time = models.TimeField()
+    
+#     def __str__(self) -> str:
+#         return self.order_name
+    
+#     class Meta:
+#         verbose_name= "Заказ"   
+#         verbose_name_plural= "Заказы"
 class Visit(models.Model):
 
     STATUS_CHOICES = [
@@ -42,6 +57,7 @@ class Master(models.Model):
         verbose_name = "Врач"
         verbose_name_plural = "Врачи"
 
+# Класс для услуг
 class Service(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
@@ -102,4 +118,25 @@ class Price(models.Model):
     
     class Meta:
         verbose_name = "Цена"
-        verbose_name_plural = "Цены" 
+        verbose_name_plural = "Цены"
+
+class SiteVisitor(models.Model):
+    session_id = models.CharField(max_length=255, unique=True)
+    first_visited_at = models.DateTimeField(verbose_name="Время первого посещения", default=timezone.now)
+    last_visited_at = models.DateTimeField(verbose_name="Время последнего посещения", default=timezone.now)
+    views = models.IntegerField(default=0, verbose_name="Просмотры")
+
+    def update_visit(self):
+        now=timezone.now()
+        if (now - self.last_visited_at) > timedelta(minutes=5):
+            self.views +=1
+            self.last_visited_at = now
+            self.save()
+
+    def __str__(self):
+        return f"{self.session_id} - Просмотры: {self.views}"
+    
+    class Meta:
+        verbose_name = "Посетитель сайта"
+        verbose_name_plural = "Посетители сайта"
+        

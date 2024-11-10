@@ -1,8 +1,10 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+# from datetime import datetime
+# from .models import Order
 from .forms import VisitModelForm, VisitEditModelForm
-from .models import Visit, Master, License, Gallery, Review, Price
+from .models import Visit, Master, License, Gallery, Review, Price, SiteVisitor
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.views.generic import View
@@ -90,6 +92,38 @@ class AppointmentView(View):
             }
             return render(request, 'cabinet/appointment.html', context)
 
+    # return render (request, 'cabinet/appointment.html', context)
+    # all_time = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30"]
+    # yesterday = datetime.today()
+    # min_day_value = yesterday.strftime("%Y-%m-%d")
+    # if request.GET.get("date") is None:
+    #     context= {
+    #         "menu": menu,
+    #         "page_alias": "appointment",
+    #         "min_day_value": min_day_value,
+    #         "all_time": all_time,
+    #         "step_1": True,
+    #         "step": "Шаг 1"
+    #         }
+    #     return render (request, 'cabinet/appointment.html', context)
+    # else:
+    #     appointments=Order.objects.filter(order_day=request.GET.get("date")).all()
+    #     print(Order.order_day)
+    #     for obj in appointments:
+    #         all_time.remove(obj.order_time.strftime("%H:%M"))
+    #     context= {
+    #         "menu": menu,
+    #         "page_alias": "appointment",
+    #         "min_day_value": min_day_value,
+    #         "all_time": all_time,
+    #         "step_1": False,
+    #         "step_2": True,
+    #         "step": "Шаг 2",
+    #         "choised_day": request.GET.get("date"),          
+    #         }        
+    #     return render (request, 'cabinet/appointment.html', context)
+
+
 def license(request):
     licenses = License.objects.all()
     context= {
@@ -168,3 +202,12 @@ class VisitDeleteView(DeleteView):
     model = Visit
     success_url = reverse_lazy("delete_page")
     pk_url_kwarg= "pk"
+
+# def track_visitor(request):
+#     session_id = request.session.session_key
+#     if not session_id:
+#         request.session.save()
+#         session_id = request.session.session_key
+#     visitor, created = SiteVisitor.objects.get_or_create(session_id=session_id)
+#     if created:
+#         visitor.save()

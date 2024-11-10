@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Галерея</title>
     {% block css %}
-        <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
     {% endblock %}
 </head>
 <body>
@@ -16,7 +16,8 @@
     <h1 class="mb-0 mt-5">Наш кабинет: снаружи и внутри</h1>
     <div class="container-fluid px-4">
         <div class="row">
-            <div class="col-12 mt-4 mb-4">
+          <div class="col-12 mt-4 mb-4">
+
                 {% for gallery in gallerys %}
                 <div class="mb-4">
                     <img src="{{ gallery.photo.url }}" class="img-fluid" alt="Gallery">
@@ -26,7 +27,7 @@
         </div>
     </div> 
     {% endblock %}
-    {% block footer %}
+        {% block footer %}
     <footer>
         <div class="container-xl">
             <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
