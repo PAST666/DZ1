@@ -13,5 +13,6 @@ p {
     font-size: medium;
 }
 .form-control {
-    border: 2px solid black;
+    border: 1px solid black;
+    width: 50%;
 }
