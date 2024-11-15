@@ -4,19 +4,6 @@ from django.views.generic import ListView
 from django.utils import timezone
 from datetime import timedelta
 
-# class Order(models.Model):
-#     order_dt = models.DateTimeField(auto_now=True)
-#     order_name = models.CharField(max_length=200, verbose_name="Имя")
-#     order_phone = models.CharField(max_length=200, verbose_name="Телефон")
-#     order_day = models.DateField()
-#     order_time = models.TimeField()
-    
-#     def __str__(self) -> str:
-#         return self.order_name
-    
-#     class Meta:
-#         verbose_name= "Заказ"   
-#         verbose_name_plural= "Заказы"
 class Visit(models.Model):
 
     STATUS_CHOICES = [
