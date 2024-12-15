@@ -13,9 +13,10 @@ body {
     margin: 0 auto;
 }
 
-h2 {
+h1 {
     text-align: center;
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    font-family: 'Lobster', cursive;
 }
 
 .table-container {
