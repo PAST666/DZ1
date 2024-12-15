@@ -12,3 +12,20 @@ body {
 h1 {
     text-align: center
 }
+
+#preparation {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+h1, h3 {
+    background-color: rgb(240, 238, 238);
+    border-radius: 10px;
+    text-align: center;
+}
+p, ul {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;
+    font-style:normal;
+    font-variation-settings: "wdth" 100; */
+}

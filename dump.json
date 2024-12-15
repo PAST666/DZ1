@@ -804,6 +804,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "5i0j2uuu2rr3rizmjc1wm5c8g3gwmkfz",
+  "fields": {
+    "session_data": "e30:1tMdK8:WCQAZ27i1rp5oJzO78lj3HW9Z1WGPGO17eOgCpNct30",
+    "expire_date": "2024-12-29T01:21:32.139Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "5mnzaxfyy53wx589an2r2xq5pw2aibvy",
   "fields": {
     "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tBavI:-X9zIgDFnV8oeGMPX7reG9xH2qt9Cr_IxDhA2Ns1VxY",
@@ -2002,6 +2010,26 @@
     "first_visited_at": "2024-11-14T14:34:40.185Z",
     "last_visited_at": "2024-11-15T15:03:26.936Z",
     "views": 4
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 10,
+  "fields": {
+    "session_id": "kqarmyfuex7pr646edqz8prpq7yoxh3w",
+    "first_visited_at": "2024-12-14T02:25:11.656Z",
+    "last_visited_at": "2024-12-15T00:48:29.637Z",
+    "views": 4
+  }
+},
+{
+  "model": "cabinet.sitevisitor",
+  "pk": 11,
+  "fields": {
+    "session_id": "5i0j2uuu2rr3rizmjc1wm5c8g3gwmkfz",
+    "first_visited_at": "2024-12-15T01:21:32.113Z",
+    "last_visited_at": "2024-12-15T07:26:13.395Z",
+    "views": 26
   }
 }
 ]

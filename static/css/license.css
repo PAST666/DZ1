@@ -12,5 +12,6 @@ body {
 }
 
 .img-fluid {
-    box-shadow: 0 0 20px 0 rgb(107, 80, 80);
+    box-shadow: 5px 5px 20px 14px #000000;
+    border-radius: 10px;    
 }
