@@ -169,6 +169,32 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2024-12-16T11:52:29.334Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "11",
+    "object_repr": "5i0j2uuu2rr3rizmjc1wm5c8g3gwmkfz - Просмотры: 35",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2024-12-16T11:52:29.342Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "10",
+    "object_repr": "kqarmyfuex7pr646edqz8prpq7yoxh3w - Просмотры: 4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -677,7 +703,7 @@
   "pk": 3,
   "fields": {
     "password": "pbkdf2_sha256$720000$E0rfD4cM5KK35jiOwkBWa9$dLN8bFyKVpUjq368M/lkqjd/GxKfvMWf/ZM+VMj6VX8=",
-    "last_login": "2024-11-14T14:34:16.267Z",
+    "last_login": "2024-12-16T11:51:44.926Z",
     "is_superuser": true,
     "username": "admin2",
     "first_name": "",
@@ -804,14 +830,6 @@
 },
 {
   "model": "sessions.session",
-  "pk": "5i0j2uuu2rr3rizmjc1wm5c8g3gwmkfz",
-  "fields": {
-    "session_data": "e30:1tMdK8:WCQAZ27i1rp5oJzO78lj3HW9Z1WGPGO17eOgCpNct30",
-    "expire_date": "2024-12-29T01:21:32.139Z"
-  }
-},
-{
-  "model": "sessions.session",
   "pk": "5mnzaxfyy53wx589an2r2xq5pw2aibvy",
   "fields": {
     "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tBavI:-X9zIgDFnV8oeGMPX7reG9xH2qt9Cr_IxDhA2Ns1VxY",
@@ -840,6 +858,14 @@
   "fields": {
     "session_data": "e30:1t32Gs:KYfeworQw2eak9oChsXvDqoPzXWGAlDsm1Wy9JJKSk0",
     "expire_date": "2024-11-04T23:57:10.968Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m3gxuqa6a9hqt9ior4zhwntj8tk1z4l1",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tN9dY:6CcUI9OHzrEbkkcFLSm4vyr76l-dDZMYlHwYLw9J2sY",
+    "expire_date": "2024-12-30T11:51:44.934Z"
   }
 },
 {
@@ -2014,22 +2040,12 @@
 },
 {
   "model": "cabinet.sitevisitor",
-  "pk": 10,
+  "pk": 12,
   "fields": {
-    "session_id": "kqarmyfuex7pr646edqz8prpq7yoxh3w",
-    "first_visited_at": "2024-12-14T02:25:11.656Z",
-    "last_visited_at": "2024-12-15T00:48:29.637Z",
-    "views": 4
-  }
-},
-{
-  "model": "cabinet.sitevisitor",
-  "pk": 11,
-  "fields": {
-    "session_id": "5i0j2uuu2rr3rizmjc1wm5c8g3gwmkfz",
-    "first_visited_at": "2024-12-15T01:21:32.113Z",
-    "last_visited_at": "2024-12-15T14:23:08.386Z",
-    "views": 35
+    "session_id": "m3gxuqa6a9hqt9ior4zhwntj8tk1z4l1",
+    "first_visited_at": "2024-12-16T12:01:41.928Z",
+    "last_visited_at": "2024-12-16T12:23:32.574Z",
+    "views": 3
   }
 }
 ]
