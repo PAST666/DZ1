@@ -260,6 +260,58 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+      "action_time": "2025-01-24T13:01:14.790Z",
+      "user": 3,
+      "content_type": 11,
+      "object_id": "39",
+      "object_repr": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+      "action_time": "2025-01-24T13:01:56.725Z",
+      "user": 3,
+      "content_type": 9,
+      "object_id": "32",
+      "object_repr": "УЗИ предстательной железы и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+      "action_time": "2025-01-24T13:02:41.058Z",
+      "user": 3,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа(",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+      "action_time": "2025-01-24T13:03:04.217Z",
+      "user": 3,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -768,7 +820,7 @@
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$720000$E0rfD4cM5KK35jiOwkBWa9$dLN8bFyKVpUjq368M/lkqjd/GxKfvMWf/ZM+VMj6VX8=",
-      "last_login": "2025-01-22T11:29:35.967Z",
+      "last_login": "2025-01-24T12:59:12.639Z",
       "is_superuser": true,
       "username": "admin2",
       "first_name": "",
@@ -891,6 +943,14 @@
     "fields": {
       "app_label": "cabinet",
       "model": "sitevisitor"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "419bk4d6s0n94qps9ndza81mms6z9txg",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tbJHE:aId0hbImtf7BHkVzbI58dvxpkmELWgtGx4XdGvVZrH0",
+      "expire_date": "2025-02-07T12:59:12.645Z"
     }
   },
   {
@@ -1291,8 +1351,8 @@
     "model": "cabinet.service",
     "pk": 39,
     "fields": {
-      "name": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, брюшная полость, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
-      "description": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, брюшная полость, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
+      "name": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
+      "description": "УЗИ мочеполовой системы (комплекс \"Мужское здоровье\"): почки, мочевой пузырь, предстательная железа (трансабдоминально, трансректально)",
       "price": "4900.00"
     }
   },
@@ -1971,7 +2031,7 @@
     "model": "cabinet.price",
     "pk": 32,
     "fields": {
-      "name": "УЗИ предстательной железы, почек и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
+      "name": "УЗИ предстательной железы и мочевого пузыря с опр-ем ост. объема мочи (трансректально)",
       "price": 2500
     }
   },
@@ -2124,6 +2184,16 @@
       "session_id": "ihgukx80nq1z1irgzzcibmj0jbnedwtx",
       "first_visited_at": "2025-01-22T11:50:11.654Z",
       "last_visited_at": "2025-01-22T11:50:11.654Z",
+      "views": 1
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 17,
+    "fields": {
+      "session_id": "r27dnjrdvebtnqnk3vc082q51cc9hxid",
+      "first_visited_at": "2025-01-24T12:58:47.466Z",
+      "last_visited_at": "2025-01-24T12:58:47.466Z",
       "views": 1
     }
   }
