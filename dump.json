@@ -312,6 +312,58 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+      "action_time": "2025-01-26T04:48:47.515Z",
+      "user": 3,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Сергей - 89613615850",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+      "action_time": "2025-01-26T04:55:39.316Z",
+      "user": 3,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "Марат - 89991112233",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+      "action_time": "2025-01-26T04:55:39.321Z",
+      "user": 3,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "Марат - 89991112233",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+      "action_time": "2025-01-26T04:55:39.326Z",
+      "user": 3,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Сергей - 89613615850",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -820,7 +872,7 @@
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$720000$E0rfD4cM5KK35jiOwkBWa9$dLN8bFyKVpUjq368M/lkqjd/GxKfvMWf/ZM+VMj6VX8=",
-      "last_login": "2025-01-24T12:59:12.639Z",
+      "last_login": "2025-01-26T04:48:07.299Z",
       "is_superuser": true,
       "username": "admin2",
       "first_name": "",
@@ -975,6 +1027,14 @@
     "fields": {
       "session_data": "e30:1t32FG:y5MElC_TTeGvYDLC4xM6qbiP4uf_7DLaNrzVMtZNWmg",
       "expire_date": "2024-11-04T23:55:30.280Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ahxyw7pedyyb89fjookqqmvj7k68f1o2",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tbuZ5:2-1jmxXryEROzefOZqOsS3zXq7y4PSeV2qvhmvQfjNI",
+      "expire_date": "2025-02-09T04:48:07.306Z"
     }
   },
   {
@@ -2195,6 +2255,26 @@
       "first_visited_at": "2025-01-24T12:58:47.466Z",
       "last_visited_at": "2025-01-24T12:58:47.466Z",
       "views": 1
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 18,
+    "fields": {
+      "session_id": "xyelb8unbxdssc7r57vwnl8zmresrh35",
+      "first_visited_at": "2025-01-26T04:07:57.448Z",
+      "last_visited_at": "2025-01-26T04:45:55.047Z",
+      "views": 6
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 19,
+    "fields": {
+      "session_id": "ahxyw7pedyyb89fjookqqmvj7k68f1o2",
+      "first_visited_at": "2025-01-26T04:49:05.958Z",
+      "last_visited_at": "2025-01-26T04:54:18.405Z",
+      "views": 2
     }
   }
 ]
