@@ -2,20 +2,10 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from .forms import VisitModelForm, VisitEditModelForm
-from .models import Visit, Master, License, Gallery, Review, Price, SiteVisitor
+from .models import Visit, Master, License, Gallery, Review, Price
 from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.views.generic import View
-from django.views.generic import (
-    View,
-    TemplateView,
-    FormView,
-    CreateView,
-    DetailView,
-    UpdateView,
-    ListView,
-    DeleteView,
-)
 from django.urls import reverse_lazy
 from django.db.models import Q
 
@@ -145,26 +135,3 @@ def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
     services_data = [{'id': service.id, 'name': service.name} for service in services]
     return JsonResponse({'services': services_data})
-
-class VisitCreateView(CreateView):
-    template_name = "cabinet/visit_form.html"
-    model = Visit
-    form_class = VisitModelForm
-    success_url = reverse_lazy('thanks_page')
-
-class VisitDetailView(DetailView):
-    template_name = "cabinet/visit_detail.html"
-    model = Visit
-    context_object_name = "visit"
-
-class VisitUpdateView(UpdateView):
-    template_name = "cabinet/visit_form.html"
-    model = Visit
-    form_class = VisitEditModelForm
-    success_url = reverse_lazy('thanks_page')
-
-class VisitDeleteView(DeleteView):
-    template_name = "cabinet/visit_delete.html"
-    model = Visit
-    success_url = reverse_lazy("delete_page")
-    pk_url_kwarg= "pk"
