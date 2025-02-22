@@ -8,6 +8,11 @@ from django.core.paginator import Paginator
 from django.views.generic import View
 from django.urls import reverse_lazy
 from django.db.models import Q
+from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from cabinet.serializers import VisitSerializer, VisitSerializer3
+from django.forms import model_to_dict
 
 menu = [
     {
@@ -135,3 +140,68 @@ def get_services_by_master(request, master_id):
     services = Master.objects.get(id=master_id).services.all()
     services_data = [{'id': service.id, 'name': service.name} for service in services]
     return JsonResponse({'services': services_data})
+
+#-----------------------------api---------------------------------------------
+class VisitApiView(viewsets.ModelViewSet):
+    queryset = Visit.objects.all()
+    serializer_class = VisitSerializer
+    # http_method_names = ['get']
+
+class VisitApiView2(APIView):
+    def get (self, request):
+        queryset = Visit.objects.all().values()
+        return Response({'visits':list(queryset)})
+    def post(self, request):
+        # Получаем данные из запроса
+        post_data = request.data
+        
+        # Создаем новый объект Visit из полученных данных
+        visit = Visit.objects.create(
+            name=post_data['name'],
+            phone=post_data['phone'],
+            comment=post_data.get('comment', ''),  # Если комментария нет, будет пустая строка
+            master_id=post_data['master'],  # Используем master_id для связи с мастером
+            status=0  # Устанавливаем начальный статус
+        )
+        
+        # Добавляем выбранные услуги через ManyToMany поле
+        if 'services' in post_data:
+            visit.services.set(post_data['services'])
+        
+        response_data = {
+            'status': 'Запись успешно создана',
+            'visit': {
+                'id': visit.id,
+                'name': visit.name,
+                'phone': visit.phone,
+                'comment': visit.comment,
+                'master_id': visit.master_id,
+                'status': visit.status,
+                'services': list(visit.services.values('id', 'name'))
+            }
+        }
+        return Response(response_data)
+
+class VisitApiView3(APIView):
+    def get (self, request):
+        queryset = Visit.objects.all()
+        return Response({'visits':VisitSerializer3(queryset, many=True).data})
+    def post(self, request):
+        # Получаем данные из запроса
+        post_data = request.data
+        serializer = VisitSerializer3(data=post_data)
+        serializer.is_valid(raise_exception=True)
+        
+        # Создаем новый объект Visit из полученных данных
+        visit = Visit.objects.create(
+            name=post_data['name'],
+            phone=post_data['phone'],
+            comment=post_data.get('comment', ''),  # Если комментария нет, будет пустая строка
+            master_id=post_data['master'],  # Используем master_id для связи с мастером
+            status=0  # Устанавливаем начальный статус
+        )        
+        # Добавляем выбранные услуги через ManyToMany поле
+        if 'services' in post_data:
+            visit.services.set(post_data['services'])
+
+        return Response({'visits': VisitSerializer3(visit).data})
