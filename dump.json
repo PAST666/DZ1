@@ -885,7 +885,7 @@
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$720000$E0rfD4cM5KK35jiOwkBWa9$dLN8bFyKVpUjq368M/lkqjd/GxKfvMWf/ZM+VMj6VX8=",
-      "last_login": "2025-02-02T06:43:22.989Z",
+      "last_login": "2025-02-10T12:56:21.446Z",
       "is_superuser": true,
       "username": "admin2",
       "first_name": "",
@@ -1012,6 +1012,22 @@
   },
   {
     "model": "sessions.session",
+    "pk": "18ro4oql0fcohir06jixjnl3wky3rer3",
+    "fields": {
+      "session_data": "e30:1toMcz:mjGgqhETHw1CmlbEpUuZY1T2Ewgj17MFkLX5CWLVJT8",
+      "expire_date": "2025-03-15T13:11:37.947Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "1z78jkauhl57pmfczoyl7ctz3o4s2754",
+    "fields": {
+      "session_data": "e30:1thTgr:AZqdRuRq1j7h0sb9PHekzwUinPgskCVtYb3ngl_jMaE",
+      "expire_date": "2025-02-24T13:19:09.876Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "419bk4d6s0n94qps9ndza81mms6z9txg",
     "fields": {
       "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tbJHE:aId0hbImtf7BHkVzbI58dvxpkmELWgtGx4XdGvVZrH0",
@@ -1020,10 +1036,26 @@
   },
   {
     "model": "sessions.session",
+    "pk": "57srxmatabwwqsztim4aqaivxx90xer2",
+    "fields": {
+      "session_data": "e30:1tjBiA:fLZgHtsNl31fvqGZpVpfPelCf-7T-xjkyEVDd80B_wQ",
+      "expire_date": "2025-03-01T06:31:34.882Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "5mnzaxfyy53wx589an2r2xq5pw2aibvy",
     "fields": {
       "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1tBavI:-X9zIgDFnV8oeGMPX7reG9xH2qt9Cr_IxDhA2Ns1VxY",
       "expire_date": "2024-11-28T14:34:16.273Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6r1lmpr9owrklx9y7ww3ezfl6arccj6q",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyG8um09eu83kN0FpGogKe3J-O-GpAe9zkzmLTwee_ZHi5tfg7gKKy6_jJCfsXQRHljuVXIt-7aS7Ik8bZNLDfF1O9u_QcaW-zYmpwxQ0qQCODuQish2DMBuAHCY5sQadEKAyBMpa1QwM08OHGk7is8X7Hw3xQ:1thTKn:_L94LQCbD-b2zWo8lflogMDuZLA-I5gXgGDoD_F2LAo",
+      "expire_date": "2025-02-24T12:56:21.452Z"
     }
   },
   {
@@ -1052,10 +1084,26 @@
   },
   {
     "model": "sessions.session",
+    "pk": "d37g0x27sryqjk6iu2chnwd6gc4q93t9",
+    "fields": {
+      "session_data": "e30:1tmYdG:Da1rHanP1nkIyebvAcWB8WVNnRqiJiEnK4FKR6IH-YI",
+      "expire_date": "2025-03-10T13:36:26.209Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "dpdsk6eezzszj3hdgjdsmwxdh6vp7kbz",
     "fields": {
       "session_data": "e30:1t32Gs:KYfeworQw2eak9oChsXvDqoPzXWGAlDsm1Wy9JJKSk0",
       "expire_date": "2024-11-04T23:57:10.968Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hwvg648taszpe5jzowz0q2jtoa15k876",
+    "fields": {
+      "session_data": "e30:1tmYYu:nodEqsTWA3Sd3oVgFqdroPl5uxAMur1CvWUriybepIY",
+      "expire_date": "2025-03-10T13:31:56.554Z"
     }
   },
   {
@@ -1122,6 +1170,292 @@
       "status": 0,
       "master": 1,
       "services": [6]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 7,
+    "fields": {
+      "name": "Марат",
+      "phone": "89991112233",
+      "comment": "лл",
+      "created_at": "2025-02-03T14:07:52.784Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 8,
+    "fields": {
+      "name": "Марат",
+      "phone": "89991112233",
+      "comment": "лл",
+      "created_at": "2025-02-04T11:57:27.255Z",
+      "status": 0,
+      "master": 1,
+      "services": [6]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 9,
+    "fields": {
+      "name": "Марат",
+      "phone": "89991112233",
+      "comment": "sss",
+      "created_at": "2025-02-04T11:58:16.866Z",
+      "status": 0,
+      "master": 1,
+      "services": [18]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 10,
+    "fields": {
+      "name": "Марат",
+      "phone": "89991112233",
+      "comment": "kk",
+      "created_at": "2025-02-04T12:20:18.428Z",
+      "status": 0,
+      "master": 1,
+      "services": [4]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 11,
+    "fields": {
+      "name": "Вася Васильев",
+      "phone": "89998887766",
+      "comment": "добавление записи через API запрос",
+      "created_at": "2025-02-10T13:20:03.890Z",
+      "status": 0,
+      "master": 1,
+      "services": [5]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 12,
+    "fields": {
+      "name": "Петр Петров",
+      "phone": "81112227755",
+      "comment": "добавление записи 2 через API запрос",
+      "created_at": "2025-02-15T06:43:23.005Z",
+      "status": 0,
+      "master": 1,
+      "services": [5]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 13,
+    "fields": {
+      "name": "Andrew",
+      "phone": "86666666666",
+      "comment": "Ok",
+      "created_at": "2025-02-15T09:10:24.811Z",
+      "status": 0,
+      "master": 1,
+      "services": [5]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 14,
+    "fields": {
+      "name": "Крис Топычканова10",
+      "phone": "89627772255",
+      "comment": "изменение записи 14 Кристины через API запрос",
+      "created_at": "2025-02-15T13:37:56.167Z",
+      "status": 0,
+      "master": 1,
+      "services": [12]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 15,
+    "fields": {
+      "name": "Крис Топычканова_2",
+      "phone": "89623334455",
+      "comment": "добавление записи 2 Кристины через API запрос",
+      "created_at": "2025-02-17T13:38:54.559Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 16,
+    "fields": {
+      "name": "Крис Топычканова_2",
+      "phone": "89623334455",
+      "comment": "добавление записи 2 Кристины через API запрос",
+      "created_at": "2025-02-17T13:42:36.057Z",
+      "status": 0,
+      "master": 1,
+      "services": [8]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 17,
+    "fields": {
+      "name": "Крис Топычканова2",
+      "phone": "89623334455",
+      "comment": "добавление записи 2 Кристины через API запрос",
+      "created_at": "2025-02-17T13:46:54.204Z",
+      "status": 0,
+      "master": 1,
+      "services": [8]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 18,
+    "fields": {
+      "name": "Крис Топычканова_11",
+      "phone": "89621112255",
+      "comment": "добавление записи 111 Кристины через API запрос",
+      "created_at": "2025-02-17T13:47:44.479Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 19,
+    "fields": {
+      "name": "Крис Топычканова2",
+      "phone": "89623334455",
+      "comment": "добавление записи 2 Кристины через API запрос",
+      "created_at": "2025-02-17T13:55:39.246Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 20,
+    "fields": {
+      "name": "Крис Топычканова7",
+      "phone": "89621112255",
+      "comment": "добавление записи 6 Кристины через API запрос",
+      "created_at": "2025-02-17T14:05:21.533Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 21,
+    "fields": {
+      "name": "Крис Топычканова7",
+      "phone": "89621112255",
+      "comment": "добавление записи 6 Кристины через API запрос",
+      "created_at": "2025-02-17T14:07:41.238Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 22,
+    "fields": {
+      "name": "Крис Топычканова4",
+      "phone": "89628888888",
+      "comment": "добавление записи 4 Кристины через API запрос",
+      "created_at": "2025-02-22T11:33:25.294Z",
+      "status": 0,
+      "master": 1,
+      "services": [4]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 24,
+    "fields": {
+      "name": "Крис Топычканова6",
+      "phone": "89621112255",
+      "comment": "добавление записи 6 Кристины через API запрос",
+      "created_at": "2025-02-22T14:18:39.375Z",
+      "status": 0,
+      "master": 1,
+      "services": []
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 27,
+    "fields": {
+      "name": "Крис Топычканова10",
+      "phone": "89627772255",
+      "comment": "добавление записи 10 Кристины через API запрос",
+      "created_at": "2025-02-26T12:13:51.046Z",
+      "status": 0,
+      "master": 1,
+      "services": [12]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 28,
+    "fields": {
+      "name": "Александр",
+      "phone": "+7 (962) 962-74-23",
+      "comment": "прошу перезвонить",
+      "created_at": "2025-02-26T13:06:29.090Z",
+      "status": 0,
+      "master": 1,
+      "services": [6, 7]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 29,
+    "fields": {
+      "name": "Александр",
+      "phone": "+7 (962) 962-74-23",
+      "comment": "прошу перезвонить",
+      "created_at": "2025-02-26T13:08:34.282Z",
+      "status": 0,
+      "master": 1,
+      "services": [6, 7]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 30,
+    "fields": {
+      "name": "Александр",
+      "phone": "+7 (962) 527-74-23",
+      "comment": "ыыы",
+      "created_at": "2025-02-26T13:08:57.378Z",
+      "status": 0,
+      "master": 1,
+      "services": [5]
+    }
+  },
+  {
+    "model": "cabinet.visit",
+    "pk": 31,
+    "fields": {
+      "name": "Крис Топычканова10",
+      "phone": "89627772255",
+      "comment": "комментарий изменен",
+      "created_at": "2025-02-26T13:12:51.297Z",
+      "status": 0,
+      "master": 1,
+      "services": [12]
     }
   },
   {
@@ -2360,8 +2694,98 @@
     "fields": {
       "session_id": "jho7ro1gr5szvx8hbzqz2riq7nqjkfwg",
       "first_visited_at": "2025-02-02T06:44:24.579Z",
-      "last_visited_at": "2025-02-02T06:49:58.389Z",
+      "last_visited_at": "2025-02-04T12:19:47.648Z",
+      "views": 6
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 24,
+    "fields": {
+      "session_id": "763j26qrwfau4301chof4gc9qq3nn3jx",
+      "first_visited_at": "2025-02-10T12:31:48.632Z",
+      "last_visited_at": "2025-02-10T12:31:48.632Z",
+      "views": 1
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 25,
+    "fields": {
+      "session_id": "q5ux3u7rwyqqp89j61j0vt2cphjvqbxr",
+      "first_visited_at": "2025-02-10T12:32:05.168Z",
+      "last_visited_at": "2025-02-10T12:48:26.337Z",
       "views": 2
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 26,
+    "fields": {
+      "session_id": "6r1lmpr9owrklx9y7ww3ezfl6arccj6q",
+      "first_visited_at": "2025-02-10T12:58:21.299Z",
+      "last_visited_at": "2025-02-19T13:24:01.158Z",
+      "views": 11
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 27,
+    "fields": {
+      "session_id": "1z78jkauhl57pmfczoyl7ctz3o4s2754",
+      "first_visited_at": "2025-02-10T13:19:09.868Z",
+      "last_visited_at": "2025-02-23T08:57:27.145Z",
+      "views": 20
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 28,
+    "fields": {
+      "session_id": "6nl0z3mqk4fecneuyxr11fft9qge5dkt",
+      "first_visited_at": "2025-02-15T06:31:18.902Z",
+      "last_visited_at": "2025-02-15T06:31:18.902Z",
+      "views": 1
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 29,
+    "fields": {
+      "session_id": "57srxmatabwwqsztim4aqaivxx90xer2",
+      "first_visited_at": "2025-02-15T06:31:34.858Z",
+      "last_visited_at": "2025-02-27T12:50:36.210Z",
+      "views": 15
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 30,
+    "fields": {
+      "session_id": "hwvg648taszpe5jzowz0q2jtoa15k876",
+      "first_visited_at": "2025-02-24T13:31:55.886Z",
+      "last_visited_at": "2025-03-04T11:55:22.150Z",
+      "views": 4
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 31,
+    "fields": {
+      "session_id": "d37g0x27sryqjk6iu2chnwd6gc4q93t9",
+      "first_visited_at": "2025-02-24T13:36:26.195Z",
+      "last_visited_at": "2025-02-27T12:53:36.843Z",
+      "views": 14
+    }
+  },
+  {
+    "model": "cabinet.sitevisitor",
+    "pk": 32,
+    "fields": {
+      "session_id": "18ro4oql0fcohir06jixjnl3wky3rer3",
+      "first_visited_at": "2025-03-01T13:11:37.454Z",
+      "last_visited_at": "2025-03-03T03:41:56.387Z",
+      "views": 11
     }
   }
 ]
