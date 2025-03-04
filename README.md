@@ -5,12 +5,13 @@
 
 Стеки проекта:
 
-Python,
-Django,
-HTML, CSS, JS,
-BootStrap 5,
+Python
+Django
+HTML, CSS, JS
+BootStrap 5
 TelegramBot
 
 Для запуска:
-- Клонировать проект git clone https://github.com/PAST666/DZ1.git
-- Установить зависимости pip install -r requirements.txt
+
+Клонировать проект git clone https://github.com/PAST666/DZ1.git
+Установить зависимости pip install -r requirements.txt
