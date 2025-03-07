@@ -1,13 +1,9 @@
-from django.urls import reverse_lazy
-from django.db.models import Q
-from rest_framework import viewsets, generics
+from rest_framework import viewsets
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAdminUser
-from cabinet.serializers import VisitSerializer, VisitSerializer3
-from django.forms import model_to_dict
-from cabinet.permissions import IsAdminOrReadOnly
+
+from api.serializers import VisitSerializer
+from api.permissions import IsAdminOrReadOnly
 from cabinet.models import Visit
 
 
