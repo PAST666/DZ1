@@ -1,6 +1,9 @@
-from django import forms
-from .models import Visit, Master, Service
 import re
+
+from django import forms
+
+from cabinet.models import Visit
+
 
 class VisitModelForm(forms.ModelForm):
     class Meta:
@@ -8,7 +11,13 @@ class VisitModelForm(forms.ModelForm):
         fields = ['name', 'phone', 'comment', 'master', 'services']
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Ваше имя', 'class': 'form-control'}),
-            'phone': forms.TextInput(attrs={'type': 'tel', 'placeholder': 'Номер телефона (Должен начинаеться с +7 или 8, длина 10 знаков!)', 'class': 'form-control'}),
+            'phone': forms.TextInput(
+                attrs={
+                    'type': 'tel',
+                    'placeholder': 'Номер телефона (Должен начинаеться с +7 или 8, длина 10 знаков!)',
+                    'class': 'form-control'
+                }
+            ),
             'comment': forms.Textarea(attrs={'placeholder': 'Комментарий', 'class': 'form-control'}),
             'master': forms.Select(attrs={'class': 'form-control'}),
             'services': forms.SelectMultiple(attrs={'class': 'form-control'}),
@@ -16,7 +25,6 @@ class VisitModelForm(forms.ModelForm):
         labels = {
             'master': 'Врач',
         }
-        
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -32,7 +40,8 @@ class VisitModelForm(forms.ModelForm):
         # Проверяем формат номера телефона: либо +7..., либо 8...
         phone_pattern = r'^(\+7|8)\d{10}$'
         if not re.match(phone_pattern, phone):
-            raise forms.ValidationError('Номер телефона должен начинаться с +7 или с 8 и содержать 10 цифр после кода страны.')
+            raise forms.ValidationError(
+                'Номер телефона должен начинаться с +7 или с 8 и содержать 10 цифр после кода страны.')
 
         return phone
 
@@ -44,23 +53,28 @@ class VisitModelForm(forms.ModelForm):
         if master and selected_services:
             # Получаем множество услуг, которые предоставляет мастер
             master_services = set(master.services.values_list('name', flat=True).distinct())
-            
+
             # Преобразуем услуги пользователя к множеству для сравнения
             selected_services_set = set(service.name for service in selected_services)
 
             # Приводим оба множества к нижнему регистру для страховки
             master_services = {service.lower() for service in master_services}
             selected_services_set = {service.lower() for service in selected_services_set}
-            
+
             # Проверяем, что мастер предоставляет все выбранные услуги
             if not selected_services_set.issubset(master_services):
                 # Вычисляем разность множеств, чтобы найти неподдерживаемые услуги
                 unsupported_services = selected_services_set - master_services
                 unsupported_services_str = ', '.join(unsupported_services)
-                self.add_error('services', f"Мастер {master.first_name} {master.last_name} не предоставляет следующие услуги: {unsupported_services_str}.")
+                self.add_error(
+                    'services',
+                    f"Мастер {master.first_name} {master.last_name} "
+                    f"не предоставляет следующие услуги: {unsupported_services_str}."
+                )
 
         return cleaned_data
-    
+
+
 class VisitEditModelForm(VisitModelForm):
     class Meta(VisitModelForm.Meta):
         fields = VisitModelForm.Meta.fields + ["status"]
