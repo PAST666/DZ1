@@ -73,12 +73,3 @@ class VisitModelForm(forms.ModelForm):
                 )
 
         return cleaned_data
-
-
-class VisitEditModelForm(VisitModelForm):
-    class Meta(VisitModelForm.Meta):
-        fields = VisitModelForm.Meta.fields + ["status"]
-        widgets = {
-            **VisitModelForm.Meta.widgets,
-            "status": forms.Select(attrs={"class": "form-control"}),
-        }
