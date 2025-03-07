@@ -1,7 +1,5 @@
-from sys import prefix
 from django.utils import timezone
-from datetime import timedelta
-from .models import SiteVisitor
+from cabinet.models import SiteVisitor
 
 class VisitorTrackingMiddleware:
     def __init__(self, get_response):

@@ -1,21 +1,25 @@
-from dz1.settings import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from .models import Visit
-from .telegram_bot import send_telegram_message
 import asyncio
 
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+from cabinet.models import Visit
+from cabinet.telegram_bot import send_telegram_message
 
 
 @receiver(post_save, sender=Visit)
 def send_telegram_notification(sender, instance, created, **kwargs):
     if created:
-        message = f"""
-*Новая запись на консультацию* 
-
-*Имя:* {instance.name} 
-*Телефон:* {instance.phone or 'не указан'} 
-*Комментарий:* {instance.comment or 'не указан'} 
--------------------------------------------------------------
-"""
-        asyncio.run(send_telegram_message(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, message))
+        message = (
+            "*Новая запись на консультацию*"
+            f"*Имя:* {instance.name}"
+            f"*Телефон:* {instance.phone or 'не указан'}"
+            f"*Комментарий:* {instance.comment or 'не указан'}"
+            f"{'-' * 30}"
+        )
+        asyncio.run(send_telegram_message(
+            settings.TELEGRAM_BOT_TOKEN,
+            settings.TELEGRAM_CHAT_ID,
+            message)
+        )
