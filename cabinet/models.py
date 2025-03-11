@@ -1,12 +1,19 @@
 from django.db import models
 
+MAX_NAME_LENGTH = 100
+MAX_PHONE_LENGTH = 20
+MAX_ADRESS_LENGTH = 255
+MAX_NAME_LENGTH_SERVICE = 200
+MAX_DIGITS_PRICE = 10
+DECIMAL_PLACES_PRICE = 2
+
 
 class Visit(models.Model):
-    name = models.CharField('Имя', max_length=100)
-    phone = models.CharField('Телефон', max_length=20)
-    comment = models.TextField(blank=True, verbose_name='Комментарий')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
-    master = models.ForeignKey('Master', on_delete=models.CASCADE, verbose_name='Мастер')
+    name = models.CharField('Имя', max_length=MAX_NAME_LENGTH)
+    phone = models.CharField('Телефон', max_length=MAX_PHONE_LENGTH)
+    comment = models.TextField('Комментарий', blank=True)
+    created_at = models.DateTimeField('Дата создания', auto_now_add=True)
+    master = models.ForeignKey('Master', on_delete=models.CASCADE)
     services = models.ManyToManyField('Service', verbose_name='Услуги')
 
     class Meta:
@@ -19,15 +26,15 @@ class Visit(models.Model):
 
 
 class Master(models.Model):
-    first_name = models.CharField('Имя', max_length=100)
-    last_name = models.CharField(max_length=100, verbose_name='Фамилия')
-    phone = models.CharField(max_length=20, verbose_name='Телефон')
-    address = models.CharField(max_length=255, verbose_name='Домашний адрес')
+    first_name = models.CharField('Имя', max_length=MAX_NAME_LENGTH)
+    last_name = models.CharField('Фамилия', max_length=MAX_NAME_LENGTH)
+    phone = models.CharField('Телефон', max_length=MAX_PHONE_LENGTH)
+    address = models.CharField('Домашний адрес', max_length=MAX_ADRESS_LENGTH)
     photo = models.ImageField(
+        'Фотография',
         upload_to='masters/photos/',
         blank=True,
         null=True,
-        verbose_name='Фотография'
     )
     services = models.ManyToManyField(
         'Service',
@@ -45,9 +52,9 @@ class Master(models.Model):
 
 
 class Service(models.Model):
-    name = models.CharField('Название', max_length=200)
-    description = models.TextField(verbose_name='Описание')
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
+    name = models.CharField('Название', max_length=MAX_NAME_LENGTH_SERVICE)
+    description = models.TextField('Описание')
+    price = models.DecimalField('Цена', max_digits=MAX_DIGITS_PRICE, decimal_places=DECIMAL_PLACES_PRICE)
 
     class Meta:
         verbose_name = "Услуга"
@@ -56,11 +63,10 @@ class Service(models.Model):
     def __str__(self):
         return self.name
 
-
 class License(models.Model):
-    name = models.CharField('Название', max_length=50)
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='license/photos/', blank=True, null=True, verbose_name='Лицензия')
+    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
+    description = models.TextField('Описание')
+    photo = models.ImageField('Лицензия', upload_to='license/photos/', blank=True, null=True)
 
     class Meta:
         verbose_name = "Лицензия"
@@ -71,9 +77,9 @@ class License(models.Model):
 
 
 class Gallery(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='gallery/photos/', blank=True, null=True, verbose_name='Галерея')
+    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
+    description = models.TextField('Описание')
+    photo = models.ImageField('Галерея', upload_to='gallery/photos/', blank=True, null=True, )
 
     class Meta:
         verbose_name = "Галерея"
@@ -84,9 +90,9 @@ class Gallery(models.Model):
 
 
 class Review(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='review/photos/', blank=True, null=True, verbose_name='Отзыв')
+    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
+    description = models.TextField('Описание')
+    photo = models.ImageField('Отзыв', upload_to='review/photos/', blank=True, null=True)
 
     class Meta:
         verbose_name = "Отзыв"
@@ -97,8 +103,8 @@ class Review(models.Model):
 
 
 class Price(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Название')
-    price = models.IntegerField(verbose_name='Цена')
+    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
+    price = models.IntegerField('Цена')
 
     class Meta:
         verbose_name = "Цена"
