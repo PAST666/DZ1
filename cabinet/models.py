@@ -2,8 +2,8 @@ from django.db import models
 
 MAX_NAME_LENGTH = 100
 MAX_PHONE_LENGTH = 20
-MAX_ADRESS_LENGTH = 255
-MAX_NAME_LENGTH_SERVICE = 200
+MAX_ADDRESS_LENGTH = 255
+BASE_MAX_NAME_LENGTH = 200
 MAX_DIGITS_PRICE = 10
 DECIMAL_PLACES_PRICE = 2
 
@@ -29,7 +29,7 @@ class Master(models.Model):
     first_name = models.CharField('Имя', max_length=MAX_NAME_LENGTH)
     last_name = models.CharField('Фамилия', max_length=MAX_NAME_LENGTH)
     phone = models.CharField('Телефон', max_length=MAX_PHONE_LENGTH)
-    address = models.CharField('Домашний адрес', max_length=MAX_ADRESS_LENGTH)
+    address = models.CharField('Домашний адрес', max_length=MAX_ADDRESS_LENGTH)
     photo = models.ImageField(
         'Фотография',
         upload_to='masters/photos/',
@@ -51,10 +51,20 @@ class Master(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
-class Service(models.Model):
-    name = models.CharField('Название', max_length=MAX_NAME_LENGTH_SERVICE)
+class NameDescriptionMixin(models.Model):
+    name = models.CharField('Название', max_length=BASE_MAX_NAME_LENGTH)
     description = models.TextField('Описание')
-    price = models.DecimalField('Цена', max_digits=MAX_DIGITS_PRICE, decimal_places=DECIMAL_PLACES_PRICE)
+
+    class Meta:
+        abstract = True
+
+
+class Service(NameDescriptionMixin):
+    price = models.DecimalField(
+        'Цена',
+        max_digits=MAX_DIGITS_PRICE,
+        decimal_places=DECIMAL_PLACES_PRICE
+    )
 
     class Meta:
         verbose_name = "Услуга"
@@ -63,10 +73,14 @@ class Service(models.Model):
     def __str__(self):
         return self.name
 
-class License(models.Model):
-    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
-    description = models.TextField('Описание')
-    photo = models.ImageField('Лицензия', upload_to='license/photos/', blank=True, null=True)
+
+class License(NameDescriptionMixin):
+    photo = models.ImageField(
+        'Лицензия',
+        upload_to='license/photos/',
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = "Лицензия"
@@ -76,10 +90,13 @@ class License(models.Model):
         return self.name
 
 
-class Gallery(models.Model):
-    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
-    description = models.TextField('Описание')
-    photo = models.ImageField('Галерея', upload_to='gallery/photos/', blank=True, null=True, )
+class Gallery(NameDescriptionMixin):
+    photo = models.ImageField(
+        'Галерея',
+        upload_to='gallery/photos/',
+        blank=True,
+        null=True,
+    )
 
     class Meta:
         verbose_name = "Галерея"
@@ -89,10 +106,13 @@ class Gallery(models.Model):
         return self.name
 
 
-class Review(models.Model):
-    name = models.CharField('Название', max_length=MAX_NAME_LENGTH)
-    description = models.TextField('Описание')
-    photo = models.ImageField('Отзыв', upload_to='review/photos/', blank=True, null=True)
+class Review(NameDescriptionMixin):
+    photo = models.ImageField(
+        'Отзыв',
+        upload_to='review/photos/',
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = "Отзыв"
