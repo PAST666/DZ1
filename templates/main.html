@@ -1,113 +1,116 @@
 {% extends "base.html" %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>{% block title %}УЗИ-кабинет "Диагностика здоровья"{% endblock %}</title>
-    {% block css %}
-        {% comment %} <link rel="stylesheet" href="{% static 'css/footer.css' %}" /> {% endcomment %}
-        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-        {% endblock %}
-</head>
-<body>
-    <header>
-        {% block nav %} {% include "includes/nav.html" %} {% endblock %}
-    </header>
-    {% block content %}
-    <div class="container-fluid px-4 py-4">
-      {% comment %} <div id="holidays" class="row">
-        <section class="col-12 mb-4">
-          <h1>C 28.12.2024 по 09.01.2025 кабинет временно не работает! Запись с 10.01.2025 по телефону 66-00-88!</h1>
-        </section>
-      </div> {% endcomment %}
-      <div id="div-header" class="row">
-        <div id="main-block-01" class="col-12 col-md-4">
-          <h1>Медицинский</br>УЗИ-кабинет "Диагностика здоровья" </h1>
-        </div>
-        <div id="main-block-02" class="col-12 col-md-4">
-          <p><b><i class="bi bi-house"></i> Адрес: </br>г.Улан-Удэ, пр-т Строителей, 18</br><i class="bi bi-telephone"></i> Телефон: 66-00-88</br><i class="bi bi-clock"></i> Время работы:</br>Пн-Пт: 9:00-12:00; 13:00-17:00</br>Сб: 9:00-12:00; 13:00-15:00</b></p>
-        </div>
-        <div id="main-block-03" class="col-12 col-md-4">
-          <h1>Принимаем по записи и БЕЗ!</h1>
-          <h3>Необходимо срочно пройти УЗИ? - приходите, немного подождите, мы Вас примем!</h3>
-        </div>
+<title>
+  {% block title %}Главная | Диагностика здоровья{% endblock %}
+</title>
+{% block content %}
+  <div class="container-fluid px-4 py-4">
+    <div id="div-header" class="row">
+      <div id="main-block-01" class="col-12 col-md-4">
+        <h1>
+          Медицинский
+          <br>
+          УЗИ-кабинет "Диагностика здоровья"
+        </h1>
       </div>
-
-        <div class="row">     
-          <section id="textcolor" class="col-12 mb-4">
-            <h2>О нас</h2>
-            <p>
-              Добро пожаловать в УЗИ-кабинет "Диагностика здоровья" — место, где оказывают медицинские услуги на высшем уровне. Мы не просто проводим диагностику, мы даем экспертное заключение и оказываем консультацию по результатам обследования. Наши  врачи - мастера своего дела и настоящие профессионалы в медицине. В "Диагностике здоровья" к каждому клиенту профессиональный подход!
-            </p>
-          </section>      
-          <section id="textcolor" class="col-12 mb-4">
-            <h2>Наши врачи</h2>
-            <p>
-              В УЗИ-кабинете "Диагностика здоровья" г.Улан-Удэ работают настоящие профессионалы своего дела. Сочетая опыт, критическое мышление, наши врачи видят объективную клиническу картину пацинта. Они готовы провести консультации в разных направлениях. Каждый пациент важен для нас!
-            </p>
-            <div class="d-flex justify-content-center">
-              <div id="mastersCarouselIndicators" class="carousel slide carousel-half-width" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                {% for master in masters %}
-                <button 
-                    type="button"
-                    data-bs-target="#mastersCarouselIndicators" 
-                    data-bs-slide-to="{{ forloop.counter0 }}" 
-                    class="{% if forloop.first %}active{% endif %}" 
-                    aria-current="true" 
-                    aria-label="Slide {{ forloop.counter }}">
-                </button>
-                {% endfor %}
-              </div>
-              <div class="carousel-inner">
-                {% for master in masters %}
-                  <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <img src="{{ master.photo.url }}" class="d-block w-100" alt="{{ master.first_name }} {{ master.last_name }}">
-                    <div class="carousel-caption">
-                      <h5 id="masterphoto">{{ master.last_name }} {{ master.first_name }}</h5>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-              <button 
-                class="carousel-control-prev" 
-                type="button" 
-                data-bs-target="#mastersCarouselIndicators" 
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button 
-                class="carousel-control-next" 
-                type="button" 
-                data-bs-target="#mastersCarouselIndicators" 
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            </div>
-          </section>      
-          <section id="textcolor" class="col-12 mb-4">
-            <h2>Услуги</h2>
-            <p>
-              В УЗИ-кабинете "Диагностика здоровья" г.Улан-Удэ мы предлагаем широкий спектр УЗИ-исследований: от щитовидной железы, органов брюшной полости, до УЗИ вен и суставов, мягких тканей.
-            </p>
-          </section>      
-          <section id="textcolor" class="col-12 mb-4">
-            <h2>Отзывы</h2>
-            <p>
-              Наша работа говорит за нас, но отзывы наших клиентов говорят еще лучше. Пациенты из города Улан-Удэ, районов Республики Бурятия обращаются в "Диагностику здоровья" и получают качественные медицинские услуги. Нас хвалят за профессионализм, душевный прием и уникальную атмосферу, которую так сложно найти в современных медицинских учреждениях. Присоединяйтесь к нашим постоянным клиентам, и, возможно, следующий отзыв напишете именно вы!
-            </p>
-            <p visibility: hidden>
-              #УЗИ03, #УЗИ-03, #УЗИУЛАНУДЭ, #ВЕСЬУЛАНУДЭ, #ТОПЫЧКАНОВА, #ТОПЫЧКАНОВААНГЕЛИНА, #ДИАГНОСТИКАЗДОРОВЬЯ
-            </p>
-          </section>     
-        </div>
+      <div id="main-block-02" class="col-12 col-md-4">
+        <p>
+          <b><i class="bi bi-house"></i> Адрес:
+            <br>
+            г.Улан-Удэ, пр-т Строителей, 18
+            <br>
+            <i class="bi bi-telephone"></i> Телефон: 66-00-88
+            <br>
+            <i class="bi bi-clock"></i> Время работы:
+            <br>
+            Пн-Пт: 9:00-12:00; 13:00-17:00
+            <br>
+          Сб: 9:00-12:00; 13:00-15:00</b>
+        </p>
+      </div>
+      <div id="main-block-03" class="col-12 col-md-4">
+        <h1>Принимаем по записи и БЕЗ!</h1>
+        <h3>Необходимо срочно пройти УЗИ? - приходите, немного подождите, мы Вас примем!</h3>
+      </div>
     </div>
-    {% endblock %}   
-</body>
-</html>
+    <div class="row">
+      <section id="textcolor" class="col-12 mb-4">
+        <h2>О нас</h2>
+        <p>
+          Добро пожаловать в УЗИ-кабинет "Диагностика здоровья" — место, где оказывают медицинские услуги на высшем
+          уровне. Мы не просто проводим диагностику, мы даем экспертное заключение и оказываем консультацию по результатам
+          обследования. Наши врачи - мастера своего дела и настоящие профессионалы в медицине. В "Диагностике здоровья" к
+          каждому клиенту профессиональный подход!
+        </p>
+      </section>
+      <section id="textcolor3" class="col-12 mb-4">
+        <h2>Наши врачи</h2>
+        <p>
+          В УЗИ-кабинете "Диагностика здоровья" г.Улан-Удэ работают настоящие профессионалы своего дела. Сочетая опыт,
+          критическое мышление, наши врачи видят объективную клиническу картину пацинта. Они готовы провести консультации
+          в разных направлениях. Каждый пациент важен для нас!
+        </p>
+        <div class="d-flex justify-content-center">
+          <div id="mastersCarouselIndicators"
+               class="carousel slide carousel-half-width"
+               data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              {% for master in masters %}
+                <button type="button"
+                        data-bs-target="#mastersCarouselIndicators"
+                        data-bs-slide-to="{{ forloop.counter0 }}"
+                        class="{% if forloop.first %}active{% endif %}"
+                        aria-current="true"
+                        aria-label="Slide {{ forloop.counter }}"></button>
+              {% endfor %}
+            </div>
+            <div class="carousel-inner">
+              {% for master in masters %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <img src="{{ master.photo.url }}"
+                       class="d-block w-100"
+                       alt="{{ master.first_name }} {{ master.last_name }}">
+                  <div class="carousel-caption">
+                    <h5 id="masterphoto">{{ master.last_name }} {{ master.first_name }}</h5>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#mastersCarouselIndicators"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#mastersCarouselIndicators"
+                    data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="textcolor1" class="col-12 mb-4">
+        <h2>Услуги</h2>
+        <p>
+          В УЗИ-кабинете "Диагностика здоровья" г.Улан-Удэ мы предлагаем широкий спектр УЗИ-исследований: от щитовидной
+          железы, органов брюшной полости, до УЗИ вен и суставов, мягких тканей.
+        </p>
+      </section>
+      <section id="textcolor2" class="col-12 mb-4">
+        <h2>Отзывы</h2>
+        <p>
+          Наша работа говорит за нас, но отзывы наших клиентов говорят еще лучше. Пациенты из города Улан-Удэ, районов
+          Республики Бурятия обращаются в "Диагностику здоровья" и получают качественные медицинские услуги. Нас хвалят за
+          профессионализм, душевный прием и уникальную атмосферу, которую так сложно найти в современных медицинских
+          учреждениях. Присоединяйтесь к нашим постоянным клиентам, и, возможно, следующий отзыв напишете именно вы!
+        </p>
+        <p visibility: hidden>
+          #УЗИ03, #УЗИ-03, #УЗИУЛАНУДЭ, #ВЕСЬУЛАНУДЭ, #ТОПЫЧКАНОВА, #ТОПЫЧКАНОВААНГЕЛИНА, #ДИАГНОСТИКАЗДОРОВЬЯ
+        </p>
+      </section>
+    </div>
+  </div>
+{% endblock %}
