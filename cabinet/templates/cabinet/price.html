@@ -1,46 +1,25 @@
 {% extends "base.html" %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {% block title %}Цены{% endblock %}
-    </title>
-    {% block css %}
-      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-      <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-      <link rel="stylesheet" href="{% static 'css/price.css' %}" />
-    {% endblock %}
-  </head>
-  <body class="price">
-    {% block content %}
-      <p class="mt-5">
-        <h1>Цены</h1>
-      </p>
-      <section>
-        <table class="mb-5 mt-5">
+<title>
+  {% block title %}Цены{% endblock %}
+</title>
+{% block content %}
+  <div class="price">
+    <p class="mt-5">
+      <h1>Цены</h1>
+    </p>
+    <section>
+      <table class="mb-5 mt-5">
+        <tr>
+          <th>Вид исследования</th>
+          <th>Стоимость</th>
+        </tr>
+        {% for curr_price in prices %}
           <tr>
-            <th>Вид исследования</th>
-            <th>Стоимость</th>
+            <td class="rowname">{{ curr_price.name }}</td>
+            <td>{{ curr_price.price }}</td>
           </tr>
-          {% for i in prices %}
-            <tr>
-              <td class="rowname">{{ i.name }}</td>
-              <td>{{ i.price }}</td>
-            </tr>
-          {% endfor %}
-        </table>
-      </section>
-    {% endblock %}
-    {% block footer %}
-      <footer>
-        <div class="container-xl">
-          <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-          <p class="text-center">Автор: @alextopdpu</p>
-        </div>
-      </footer>
-    {% endblock %}
-  </body>
-</html>
+        {% endfor %}
+      </table>
+    </section>
+  </div>
+{% endblock %}
