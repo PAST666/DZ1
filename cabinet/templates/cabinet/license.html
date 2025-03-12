@@ -2,35 +2,36 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Лицензия</title>
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/license.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/license.css' %}" />
     {% endblock %}
-</head>
-<body>
+  </head>
+  <body>
     {% block content %}
-    <div class="container-fluid px-4">
+      <div class="container-fluid px-4">
         <div class="row">
-            <div class="col-12 mt-4 mb-4">
-                {% for license in licenses %}
-                <div class="mb-4">
-                    <img src="{{ license.photo.url }}" class="img-fluid" alt="License">
-                </div>
-                {% endfor %}
-            </div>
+          <div class="col-12 mt-4 mb-4">
+            {% for license in licenses %}
+              <div class="mb-4">
+                <img src="{{ license.photo.url }}" class="img-fluid" alt="License">
+              </div>
+            {% endfor %}
+          </div>
         </div>
-    </div>
-    {% endblock %} 
+      </div>
+    {% endblock %}
     {% block footer %}
-    <footer class="container-fluid">
+      <footer class="container-fluid">
         <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
         <p class="text-center">Автор: @alextopdpu</p>
-    </footer>
-    {% endblock %}  
-</body>
+      </footer>
+    {% endblock %}
+  </body>
 </html>

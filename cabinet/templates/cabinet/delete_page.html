@@ -2,27 +2,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Запись удалена!</title>
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/thanks_page.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/thanks_page.css' %}" />
     {% endblock %}
-</head>
-<body>
+  </head>
+  <body>
     {% block content %}
-        <h1 class="mt-4">Вы удалили запись!</h1>
-        <a href="{% url "main" %}" class="btn btn-dark mt-4">Вернуться на главную</a>
-    {% endblock %}  
+      <h1 class="mt-4">Вы удалили запись!</h1>
+      <a href="{% url "main" %}" class="btn btn-dark mt-4">Вернуться на главную</a>
+    {% endblock %}
     {% block footer %}
-    <footer>
+      <footer>
         <div class="container-xl">
-            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-            <p class="text-center">Автор: @alextopdpu</p>
+          <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+          <p class="text-center">Автор: @alextopdpu</p>
         </div>
-    </footer>
-    {% endblock %} 
-</body>
+      </footer>
+    {% endblock %}
+  </body>
 </html>

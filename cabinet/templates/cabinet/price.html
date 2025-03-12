@@ -2,47 +2,45 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Цены{% endblock %}</title>
+    <title>
+      {% block title %}Цены{% endblock %}
+    </title>
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/price.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/price.css' %}" />
     {% endblock %}
-
-</head>
-<body class="price">
+  </head>
+  <body class="price">
     {% block content %}
-        <p class="mt-5"><h1>Цены</h1></p>
-    
-    <section>        
+      <p class="mt-5">
+        <h1>Цены</h1>
+      </p>
+      <section>
         <table class="mb-5 mt-5">
+          <tr>
+            <th>Вид исследования</th>
+            <th>Стоимость</th>
+          </tr>
+          {% for i in prices %}
             <tr>
-                <th>Вид исследования</th>
-                <th>Стоимость</th>
+              <td class="rowname">{{ i.name }}</td>
+              <td>{{ i.price }}</td>
             </tr>
-            {% for i in prices %}
-            <tr>
-                <td class="rowname">
-                    {{ i.name }}
-                </td>
-                <td>
-                    {{ i.price }}
-                </td>
-            </tr>
-            {% endfor %}
+          {% endfor %}
         </table>
-    </section>
-    {% endblock %}  
+      </section>
+    {% endblock %}
     {% block footer %}
-    <footer>
+      <footer>
         <div class="container-xl">
-            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-            <p class="text-center">Автор: @alextopdpu</p>
+          <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
+          <p class="text-center">Автор: @alextopdpu</p>
         </div>
-    </footer>
-    {% endblock %}  
-</body>
+      </footer>
+    {% endblock %}
+  </body>
 </html>
