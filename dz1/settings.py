@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY =  os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG").lower() == "true"
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split()
 CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS").split()
@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cabinet",
     "rest_framework",
-    "api.apps.ApiConfig"
+    "api.apps.ApiConfig",
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
-} 
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {

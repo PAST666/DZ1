@@ -13,11 +13,11 @@ async def send_to_telegram(message, parse_mode="Markdown"):
         await bot.send_message(
             chat_id=settings.TELEGRAM_CHAT_ID,
             text=message,
-            parse_mode=parse_mode
+            parse_mode=parse_mode,
         )
         logging.info(
             f'Сообщение "{message}" '
-            f'отправлено в чат {settings.TELEGRAM_CHAT_ID}'
+            f"отправлено в чат {settings.TELEGRAM_CHAT_ID}"
         )
     except Exception as err_msg:
         logging.error(

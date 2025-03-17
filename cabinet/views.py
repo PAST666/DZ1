@@ -1,42 +1,11 @@
+from django.conf import settings
 from django.core.paginator import Paginator
 from django.http import JsonResponse
-from django.conf import settings
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import View
 
 from cabinet.forms import VisitModelForm
-from cabinet.models import Master, License, Gallery, Review, Price
-
-menu = [
-    {
-        "name":"Главная",
-        "alias":"main",
-    },
-        {
-        "name":"Цены",
-        "alias":"price",
-    },
-        {
-        "name":"Записаться на прием",
-        "alias":"appointment",
-    },
-        {
-        "name":"Лицензия",
-        "alias":"license",
-    },
-            {
-        "name":"Галерея",
-        "alias":"gallery",
-    },
-            {
-        "name":"Подготовка к УЗИ",
-        "alias":"preparation",
-    },
-                {
-        "name":"Отзывы в 2ГИС",
-        "alias":"reviews",
-    }
-]
+from cabinet.models import Gallery, License, Master, Price, Review
 
 
 def get_paginator(request, data, per_page):
@@ -47,65 +16,64 @@ def get_paginator(request, data, per_page):
 
 def main(request):
     context = {
-        'masters': Master.objects.all(),
-        }
-    return render (request, 'main.html', context)
+        "masters": Master.objects.all(),
+    }
+    return render(request, "main.html", context)
+
 
 def price(request):
-    context= {
-        "prices": Price.objects.all()
-        }
-    return render (request, 'cabinet/price.html', context)
+    context = {"prices": Price.objects.all()}
+    return render(request, "cabinet/price.html", context)
+
 
 class AppointmentView(View):
     def get(self, request):
-        context= {
-            'form': VisitModelForm(),
-            }
-        return render(request, 'cabinet/appointment.html', context)
+        context = {
+            "form": VisitModelForm(),
+        }
+        return render(request, "cabinet/appointment.html", context)
 
     def post(self, request):
         form = VisitModelForm(request.POST)
 
         if form.is_valid():
             form.save()
-            return redirect('thanks_page')
+            return redirect("thanks_page")
 
-        context= {
-        'form': form,
+        context = {
+            "form": form,
         }
-        return render(request, 'cabinet/appointment.html', context)
+        return render(request, "cabinet/appointment.html", context)
+
 
 def license_page(request):
-    context= {
-        "licenses": License.objects.all()
-        }
-    return render (request, 'cabinet/license.html', context)
+    context = {"licenses": License.objects.all()}
+    return render(request, "cabinet/license.html", context)
+
 
 def gallery(request):
-    context= {
-        "galleries": Gallery.objects.all()
-        }
-    return render (request, 'cabinet/gallery.html', context)
+    context = {"galleries": Gallery.objects.all()}
+    return render(request, "cabinet/gallery.html", context)
+
 
 def preparation(request):
-    return render (request, 'cabinet/preparation.html')
+    return render(request, "cabinet/preparation.html")
+
 
 def reviews(request):
     page_obj = get_paginator(
-        request,
-        Review.objects.all(),
-        settings.REVIEWS_PER_PAGE
+        request, Review.objects.all(), settings.REVIEWS_PER_PAGE
     )
-    context= {
+    context = {
         "page_obj": page_obj,
-        }
+    }
 
-    return render (request, 'cabinet/reviews.html', context)
+    return render(request, "cabinet/reviews.html", context)
 
-class ThanksView (View):
-    def get (self, request):
-        return render (request, 'cabinet/thanks_page.html')
+
+class ThanksView(View):
+    def get(self, request):
+        return render(request, "cabinet/thanks_page.html")
 
 
 def get_services_by_master(request, master_id):
@@ -113,6 +81,8 @@ def get_services_by_master(request, master_id):
 
     services = master.services.all()
 
-    services_data = [{'id': service.id, 'name': service.name} for service in services]
+    services_data = [
+        {"id": service.id, "name": service.name} for service in services
+    ]
 
-    return JsonResponse({'services': services_data})
+    return JsonResponse({"services": services_data})

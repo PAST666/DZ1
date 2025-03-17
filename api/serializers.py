@@ -6,4 +6,4 @@ from cabinet.models import Visit
 class VisitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Visit
-        fields = '__all__'
+        fields = "__all__"
