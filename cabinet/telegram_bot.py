@@ -1,19 +1,27 @@
-import os
 import logging
+
 import telegram
-from dotenv import load_dotenv
-import asyncio
+from django.conf import settings
 
-
-# Настройка логирования
 logging.basicConfig(level=logging.DEBUG)
 
 
-async def send_telegram_message(token, chat_id, message, parse_mode="Markdown"):
+async def send_to_telegram(message, parse_mode="Markdown"):
     try:
-        bot = telegram.Bot(token=token)
-        await bot.send_message(chat_id=chat_id, text=message, parse_mode=parse_mode)
-        logging.info(f'Сообщение "{message}" отправлено в чат {chat_id}')
-    except Exception as e:
-        logging.error(f"Ошибка отправки сообщения в чат {chat_id}: {e}")
+        bot = telegram.Bot(token=settings.TELEGRAM_BOT_TOKEN)
+
+        await bot.send_message(
+            chat_id=settings.TELEGRAM_CHAT_ID,
+            text=message,
+            parse_mode=parse_mode,
+        )
+        logging.info(
+            f'Сообщение "{message}" '
+            f"отправлено в чат {settings.TELEGRAM_CHAT_ID}"
+        )
+    except Exception as err_msg:
+        logging.error(
+            "Ошибка отправки сообщения в чат "
+            f"{settings.TELEGRAM_CHAT_ID}: {err_msg}"
+        )
         raise

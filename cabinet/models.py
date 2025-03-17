@@ -1,129 +1,126 @@
-from tabnanny import verbose
 from django.db import models
-from django.views.generic import ListView
-from django.utils import timezone
-from datetime import timedelta
+
+MAX_NAME_LENGTH = 100
+MAX_PHONE_LENGTH = 20
+MAX_ADDRESS_LENGTH = 255
+BASE_MAX_NAME_LENGTH = 200
+MAX_DIGITS_PRICE = 10
+DECIMAL_PLACES_PRICE = 2
+
 
 class Visit(models.Model):
+    name = models.CharField("Имя", max_length=MAX_NAME_LENGTH)
+    phone = models.CharField("Телефон", max_length=MAX_PHONE_LENGTH)
+    comment = models.TextField("Комментарий", blank=True)
+    created_at = models.DateTimeField("Дата создания", auto_now_add=True)
+    master = models.ForeignKey("Master", on_delete=models.CASCADE)
+    services = models.ManyToManyField("Service", verbose_name="Услуги")
 
-    STATUS_CHOICES = [
-        (0, 'Не подтверждена'),
-        (1, 'Подтверждена'),
-        (2, 'Отменена'),
-        (3, 'Выполнена'),
-    ]
-
-    name = models.CharField(max_length=100, verbose_name='Имя')
-    phone = models.CharField(max_length=20, verbose_name='Телефон')
-    comment = models.TextField(blank=True, verbose_name='Комментарий')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
-    status = models.IntegerField(choices=STATUS_CHOICES, default=0, verbose_name='Статус')
-    master = models.ForeignKey('Master', on_delete=models.CASCADE, verbose_name='Мастер')
-    services = models.ManyToManyField('Service', verbose_name='Услуги')
-
-    def __str__(self):
-        return f'{self.name} - {self.phone}'
-    
     class Meta:
         verbose_name = "Запись"
         verbose_name_plural = "Записи"
-
-# Класс для мастеров
-class Master(models.Model):
-    first_name = models.CharField(max_length=100, verbose_name='Имя')
-    last_name = models.CharField(max_length=100, verbose_name='Фамилия')
-    phone = models.CharField(max_length=20, verbose_name='Телефон')
-    address = models.CharField(max_length=255, verbose_name='Домашний адрес')
-    photo = models.ImageField(upload_to='masters/photos/', blank=True, null=True, verbose_name='Фотография')
-    services = models.ManyToManyField('Service', related_name='masters', verbose_name='Услуги')
+        ordering = ("-created_at",)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
-    
+        return f"{self.name} - {self.phone}"
+
+
+class Master(models.Model):
+    first_name = models.CharField("Имя", max_length=MAX_NAME_LENGTH)
+    last_name = models.CharField("Фамилия", max_length=MAX_NAME_LENGTH)
+    phone = models.CharField("Телефон", max_length=MAX_PHONE_LENGTH)
+    address = models.CharField("Домашний адрес", max_length=MAX_ADDRESS_LENGTH)
+    photo = models.ImageField(
+        "Фотография",
+        upload_to="masters/photos/",
+        blank=True,
+        null=True,
+    )
+    services = models.ManyToManyField(
+        "Service", related_name="masters", verbose_name="Услуги"
+    )
+
     class Meta:
         verbose_name = "Врач"
         verbose_name_plural = "Врачи"
-
-# Класс для услуг
-class Service(models.Model):
-    name = models.CharField(max_length=200, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена')
+        ordering = ("first_name", "last_name")
 
     def __str__(self):
-        return self.name
-    
+        return f"{self.first_name} {self.last_name}"
+
+
+class NameDescriptionMixin(models.Model):
+    name = models.CharField("Название", max_length=BASE_MAX_NAME_LENGTH)
+    description = models.TextField("Описание")
+
+    class Meta:
+        abstract = True
+
+
+class Service(NameDescriptionMixin):
+    price = models.DecimalField(
+        "Цена",
+        max_digits=MAX_DIGITS_PRICE,
+        decimal_places=DECIMAL_PLACES_PRICE,
+    )
+
     class Meta:
         verbose_name = "Услуга"
         verbose_name_plural = "Услуги"
 
-class License(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='license/photos/', blank=True, null=True, verbose_name='Лицензия')
-
-
     def __str__(self):
         return self.name
-    
+
+
+class License(NameDescriptionMixin):
+    photo = models.ImageField(
+        "Лицензия", upload_to="license/photos/", blank=True, null=True
+    )
+
     class Meta:
         verbose_name = "Лицензия"
         verbose_name_plural = "Лицензии"
 
-class Gallery(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='gallery/photos/', blank=True, null=True, verbose_name='Галерея')
-
-
     def __str__(self):
         return self.name
-    
+
+
+class Gallery(NameDescriptionMixin):
+    photo = models.ImageField(
+        "Галерея",
+        upload_to="gallery/photos/",
+        blank=True,
+        null=True,
+    )
+
     class Meta:
         verbose_name = "Галерея"
         verbose_name_plural = "Галереи"
 
-class Review(models.Model, ListView):
-    name = models.CharField(max_length=50, verbose_name='Название')
-    description = models.TextField(verbose_name='Описание')
-    photo = models.ImageField(upload_to='review/photos/', blank=True, null=True, verbose_name='Отзыв')
-
-
     def __str__(self):
         return self.name
-    
+
+
+class Review(NameDescriptionMixin):
+    photo = models.ImageField(
+        "Отзыв", upload_to="review/photos/", blank=True, null=True
+    )
+
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
 
-class Price(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Название')
-    price = models.IntegerField(verbose_name='Цена')
-
     def __str__(self):
         return self.name
-    
+
+
+class Price(models.Model):
+    name = models.CharField("Название", max_length=MAX_NAME_LENGTH)
+    price = models.IntegerField("Цена")
+
     class Meta:
         verbose_name = "Цена"
         verbose_name_plural = "Цены"
 
-class SiteVisitor(models.Model):
-    session_id = models.CharField(max_length=255, unique=True)
-    first_visited_at = models.DateTimeField(verbose_name="Время первого посещения", default=timezone.now)
-    last_visited_at = models.DateTimeField(verbose_name="Время последнего посещения", default=timezone.now)
-    views = models.IntegerField(default=0, verbose_name="Просмотры")
-
-    def update_visit(self):
-        now=timezone.now()
-        if (now - self.last_visited_at) > timedelta(minutes=5):
-            self.views +=1
-            self.last_visited_at = now
-            self.save()
-
     def __str__(self):
-        return f"{self.session_id} - Просмотры: {self.views}"
-    
-    class Meta:
-        verbose_name = "Посетитель сайта"
-        verbose_name_plural = "Посетители сайта"
-        
+        return self.name

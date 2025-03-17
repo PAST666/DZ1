@@ -1,85 +1,62 @@
 {% extends "base.html" %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Записаться на прием</title>
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/appointment.css' %}" />
-    {% endblock %}
-</head>
-<body>
-    {% block content %}
-    <div class="container py-4">
-        <div class="row">      
-            <section id="orderForm" class="col-12 mb-4">
-                <h1>Запись на обследование</h1>
-                <p>
-                    Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
-                </p>
-                <form action="" method="post">
-                    {% csrf_token %}
-                    <div id="formcss" class="mb-3">{{ form.as_p }}</div>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
-                </form>
-            </section>       
-        </div>
+<title>
+  {% block title %}Записаться на прием{% endblock %}
+</title>
+{% block content %}
+  <div class="container py-4">
+    <div class="row">
+      <section id="orderForm" class="col-12 mb-4">
+        <h1>Запись на обследование</h1>
+        <p>
+          Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
+        </p>
+        <form action="" method="post">
+          {% csrf_token %}
+          <div id="formcss" class="mb-3">{{ form.as_p }}</div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+      </section>
     </div>
-
-    <script>
-        // Функция для выполнения AJAX-запроса к серверу и получения услуг по выбранному мастеру
-        async function fetchServices(masterId) {
-            const url = `/get_services_by_master/${masterId}/`; // Убедитесь, что этот URL соответствует маршрутизации
-            const response = await fetch(url);
-            const data = await response.json();
-            return data.services;
-        }
-        
-        // Функция для обновления выпадающего списка услуг на основе полученных данных
-        function updateServiceOptions(services) {
-            const serviceSelect = document.getElementById("id_services");
-        
-            // Очистить текущий список опций услуг
-            serviceSelect.innerHTML = "";
-        
-            // Добавить новые опции на основании полученных данных
-            services.forEach(function (service) {
-                const option = document.createElement("option");
-                option.value = service.id;
-                option.text = service.name;
-                serviceSelect.appendChild(option);
-            });
-        }
-        
-        // Обработчик изменения мастера, который запрашивает данные и обновляет список услуг
-        function setupServiceSelectListener() {
-            const masterSelect = document.getElementById("id_master");
-            
-            masterSelect.addEventListener("change", async function () {
-                const masterId = masterSelect.value;
-                const services = await fetchServices(masterId);
-                updateServiceOptions(services);
-            });
-        }
-        
-        // Добавляем обработчик DOMContentLoaded чтобы инициализировать наш Listener после загрузки документа
-        document.addEventListener("DOMContentLoaded", function () {
-            setupServiceSelectListener();
+  </div>
+  <script>
+    // Функция для выполнения AJAX-запроса к серверу и получения услуг по выбранному мастеру
+    async function fetchServices(masterId) {
+        const url = `/get_services_by_master/${masterId}/`; // Убедитесь, что этот URL соответствует маршрутизации
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.services;
+    }
+    
+    // Функция для обновления выпадающего списка услуг на основе полученных данных
+    function updateServiceOptions(services) {
+        const serviceSelect = document.getElementById("id_services");
+    
+        // Очистить текущий список опций услуг
+        serviceSelect.innerHTML = "";
+    
+        // Добавить новые опции на основании полученных данных
+        services.forEach(function (service) {
+            const option = document.createElement("option");
+            option.value = service.id;
+            option.text = service.name;
+            serviceSelect.appendChild(option);
         });
-        </script>
-    {% endblock %}  
-
-    {% block footer %}
-    <footer>
-        <div class="container-xl">
-            <p class="text-center">&copy; 2024 Медицинский кабинет "Диагностика здоровья"</p>
-            <p class="text-center">Автор: @alextopdpu</p>
-        </div>
-    </footer>
-    {% endblock %}
-</body>
-</html>
+    }
+    
+    // Обработчик изменения мастера, который запрашивает данные и обновляет список услуг
+    function setupServiceSelectListener() {
+        const masterSelect = document.getElementById("id_master");
+        
+        masterSelect.addEventListener("change", async function () {
+            const masterId = masterSelect.value;
+            const services = await fetchServices(masterId);
+            updateServiceOptions(services);
+        });
+    }
+    
+    // Добавляем обработчик DOMContentLoaded чтобы инициализировать наш Listener после загрузки документа
+    document.addEventListener("DOMContentLoaded", function () {
+        setupServiceSelectListener();
+    });
+  </script>
+{% endblock %}
