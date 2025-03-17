@@ -3,7 +3,8 @@
 #########################
 dump.json
 media/
-static/
+!**/static/*
+static/admin/
 
 
 #########################
