@@ -4,12 +4,11 @@ from cabinet.views import (
     main,
     price,
     AppointmentView,
-    license,
+    license_page,
     gallery,
     preparation,
     reviews,
     ThanksView,
-    Delete_View,
     get_services_by_master,
 )
 from django.conf import settings
@@ -26,12 +25,11 @@ urlpatterns = [
         AppointmentView.as_view(),
         name="appointment"
     ),
-    path("license/", license, name="license"),
+    path("license/", license_page, name="license"),
     path("gallery/", gallery, name="gallery"),
     path("preparation/", preparation, name="preparation"),
     path("reviews/", reviews, name="reviews"),
     path("thanks_page/", ThanksView.as_view(), name="thanks_page"),
-    path("delete_page/", Delete_View.as_view(), name="delete_page"),
     path(
         "get_services_by_master/<int:master_id>/",
         get_services_by_master,

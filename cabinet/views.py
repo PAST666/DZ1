@@ -1,6 +1,7 @@
 from django.core.paginator import Paginator
 from django.http import JsonResponse
-from django.shortcuts import render, redirect
+from django.conf import settings
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
 
 from cabinet.forms import VisitModelForm
@@ -37,98 +38,81 @@ menu = [
     }
 ]
 
+
+def get_paginator(request, data, per_page):
+    paginator = Paginator(data, per_page)
+
+    return paginator.get_page(request.GET.get("page"))
+
+
 def main(request):
-    masters = Master.objects.all()
-    context= {
-        "menu": menu,
-        "page_alias": "main",
-        'masters': masters,
+    context = {
+        'masters': Master.objects.all(),
         }
     return render (request, 'main.html', context)
 
 def price(request):
-    prices= Price.objects.all()
     context= {
-        "menu": menu,
-        "page_alias": "price",
-        "prices": prices
+        "prices": Price.objects.all()
         }
     return render (request, 'cabinet/price.html', context)
 
 class AppointmentView(View):
     def get(self, request):
-        form = VisitModelForm()
         context= {
-            "menu": menu,
-            "page_alias": "appointment",
-            'form': form,
+            'form': VisitModelForm(),
             }
         return render(request, 'cabinet/appointment.html', context)
+
     def post(self, request):
         form = VisitModelForm(request.POST)
+
         if form.is_valid():
             form.save()
             return redirect('thanks_page')
-        if form.errors:
-            context= {
-            "menu": menu,
-            "page_alias": "appointment",
-            'form': form,
-            }
-            return render(request, 'cabinet/appointment.html', context)
 
-def license(request):
-    licenses = License.objects.all()
+        context= {
+        'form': form,
+        }
+        return render(request, 'cabinet/appointment.html', context)
+
+def license_page(request):
     context= {
-        "menu": menu,
-        "page_alias": "license",
-        "licenses": licenses
+        "licenses": License.objects.all()
         }
     return render (request, 'cabinet/license.html', context)
 
 def gallery(request):
-    gallerys = Gallery.objects.all()
     context= {
-        "menu": menu,
-        "page_alias": "gallery",
-        "gallerys": gallerys
+        "galleries": Gallery.objects.all()
         }
     return render (request, 'cabinet/gallery.html', context)
 
 def preparation(request):
-    context= {
-        "menu": menu,
-        "page_alias": "preparation",
-        }
-    return render (request, 'cabinet/preparation.html', context)
+    return render (request, 'cabinet/preparation.html')
 
 def reviews(request):
-    reviews = Review.objects.all()
-    paginator = Paginator(reviews, 5)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
+    page_obj = get_paginator(
+        request,
+        Review.objects.all(),
+        settings.REVIEWS_PER_PAGE
+    )
     context= {
-        "menu": menu,
-        "page_alias": "reviews",
         "page_obj": page_obj,
         }
+
     return render (request, 'cabinet/reviews.html', context)
 
 class ThanksView (View):
     def get (self, request):
-        context= {
-        "page_alias": "thanks_page",
-        }
-        return render (request, 'cabinet/thanks_page.html', context)
+        return render (request, 'cabinet/thanks_page.html')
 
-class Delete_View (View):
-    def get (self, request):
-        context= {
-        "page_alias": "thanks_page",
-        }
-        return render (request, 'cabinet/delete_page.html', context)
 
 def get_services_by_master(request, master_id):
-    services = Master.objects.get(id=master_id).services.all()
+    master = get_object_or_404(Master, id=master_id)
+
+    services = master.services.all()
+
     services_data = [{'id': service.id, 'name': service.name} for service in services]
+
     return JsonResponse({'services': services_data})
