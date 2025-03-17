@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
 
 from cabinet.views import (
     AppointmentView,
@@ -17,7 +17,6 @@ from cabinet.views import (
 
 urlpatterns = [
     path("", main, name="main"),
-    path("api/", include("api.urls")),
     path("admin/", admin.site.urls),
     path("price/", price, name="price"),
     path("appointment/", AppointmentView.as_view(), name="appointment"),
