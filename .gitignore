@@ -4,7 +4,8 @@
 dump.json
 media/
 !**/static/*
-static/admin/
+**/static/admin/
+**/static/staticfiles.json
 
 
 #########################
