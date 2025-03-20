@@ -1,18 +1,18 @@
 {% extends "base.html" %}
-<title>
-  {% block title %}Галерея{% endblock %}
-</title>
+{% block title %}Галерея{% endblock %}
 {% block content %}
-  <h1 class="mb-3 mt-5">Наш кабинет: снаружи и внутри</h1>
-  <div class="container-fluid px-4">
+  <div class="container py-4">
+    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Наш кабинет: снаружи и внутри</h1>
     <div class="row">
-      <div class="col-12 mt-4 mb-4">
-        {% for gallery in galleries %}
-          <div class="mb-5">
-            <img src="{{ gallery.photo.url }}" class="img-fluid" alt="Gallery">
-          </div>
-        {% endfor %}
-      </div>
+      {% for gallery in galleries %}
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <img src="{{ gallery.photo.url }}"
+               class="img-fluid rounded shadow"
+               alt="{{ gallery.name }}">
+        </div>
+      {% empty %}
+        <p class="text-center">Галерея пока пуста.</p>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}

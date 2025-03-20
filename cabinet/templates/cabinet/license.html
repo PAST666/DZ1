@@ -1,17 +1,18 @@
 {% extends "base.html" %}
-<title>
-  {% block title %}Лицензия{% endblock %}
-</title>
+{% block title %}Лицензия{% endblock %}
 {% block content %}
-  <div class="container-fluid px-4">
-    <div class="row">
-      <div class="col-12 mt-4 mb-4">
-        {% for license in licenses %}
-          <div class="mb-4">
-            <img src="{{ license.photo.url }}" class="img-fluid" alt="License">
-          </div>
-        {% endfor %}
-      </div>
+  <div class="container py-4">
+    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Наши лицензии</h1>
+    <div class="row justify-content-center">
+      {% for license in licenses %}
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <img src="{{ license.photo.url }}"
+               class="img-fluid rounded shadow"
+               alt="{{ license.name }}">
+        </div>
+      {% empty %}
+        <p class="text-center">Лицензии отсутствуют.</p>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}

@@ -1,62 +1,43 @@
 {% extends "base.html" %}
-<title>
-  {% block title %}Записаться на прием{% endblock %}
-</title>
+{% load django_bootstrap5 %}
+{% block title %}Записаться на прием{% endblock %}
 {% block content %}
   <div class="container py-4">
-    <div class="row">
-      <section id="orderForm" class="col-12 mb-4">
-        <h1>Запись на обследование</h1>
-        <p>
-          Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
-        </p>
-        <form action="" method="post">
-          {% csrf_token %}
-          <div id="formcss" class="mb-3">{{ form.as_p }}</div>
-          <button type="submit" class="btn btn-primary">Отправить</button>
-        </form>
-      </section>
-    </div>
+    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Запись на обследование</h1>
+    <p class="text-justify">
+      Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
+    </p>
+    <form action="" method="post" class="mt-4">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      {% bootstrap_button "Отправить" button_type="submit" button_class="btn-primary" %}
+    </form>
   </div>
   <script>
-    // Функция для выполнения AJAX-запроса к серверу и получения услуг по выбранному мастеру
     async function fetchServices(masterId) {
-        const url = `/get_services_by_master/${masterId}/`; // Убедитесь, что этот URL соответствует маршрутизации
-        const response = await fetch(url);
-        const data = await response.json();
-        return data.services;
+      const url = `/get_services_by_master/${masterId}/`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return data.services;
     }
-    
-    // Функция для обновления выпадающего списка услуг на основе полученных данных
     function updateServiceOptions(services) {
-        const serviceSelect = document.getElementById("id_services");
-    
-        // Очистить текущий список опций услуг
-        serviceSelect.innerHTML = "";
-    
-        // Добавить новые опции на основании полученных данных
-        services.forEach(function (service) {
-            const option = document.createElement("option");
-            option.value = service.id;
-            option.text = service.name;
-            serviceSelect.appendChild(option);
-        });
+      const serviceSelect = document.getElementById("id_services");
+      serviceSelect.innerHTML = "";
+      services.forEach(function (service) {
+        const option = document.createElement("option");
+        option.value = service.id;
+        option.text = service.name;
+        serviceSelect.appendChild(option);
+      });
     }
-    
-    // Обработчик изменения мастера, который запрашивает данные и обновляет список услуг
     function setupServiceSelectListener() {
-        const masterSelect = document.getElementById("id_master");
-        
-        masterSelect.addEventListener("change", async function () {
-            const masterId = masterSelect.value;
-            const services = await fetchServices(masterId);
-            updateServiceOptions(services);
-        });
+      const masterSelect = document.getElementById("id_master");
+      masterSelect.addEventListener("change", async function () {
+        const masterId = masterSelect.value;
+        const services = await fetchServices(masterId);
+        updateServiceOptions(services);
+      });
     }
-    
-    // Добавляем обработчик DOMContentLoaded чтобы инициализировать наш Listener после загрузки документа
-    document.addEventListener("DOMContentLoaded", function () {
-        setupServiceSelectListener();
-    });
+    document.addEventListener("DOMContentLoaded", setupServiceSelectListener);
   </script>
 {% endblock %}

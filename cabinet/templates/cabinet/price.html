@@ -1,25 +1,25 @@
 {% extends "base.html" %}
-<title>
-  {% block title %}Стоимость УЗИ{% endblock %}
-</title>
+{% block title %}Стоимость УЗИ{% endblock %}
 {% block content %}
-  <div class="price">
-    <p class="mt-5">
-      <h1>Цены</h1>
-    </p>
-    <section>
-      <table class="mb-5 mt-5">
-        <tr>
-          <th>Вид исследования</th>
-          <th>Стоимость</th>
-        </tr>
-        {% for curr_price in prices %}
+  <div class="container py-4">
+    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Цены</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
           <tr>
-            <td class="rowname">{{ curr_price.name }}</td>
-            <td>{{ curr_price.price }}</td>
+            <th>Вид исследования</th>
+            <th>Стоимость</th>
           </tr>
-        {% endfor %}
+        </thead>
+        <tbody>
+          {% for curr_price in prices %}
+            <tr>
+              <td>{{ curr_price.name }}</td>
+              <td>{{ curr_price.price }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
       </table>
-    </section>
+    </div>
   </div>
 {% endblock %}
