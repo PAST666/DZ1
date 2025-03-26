@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% load django_bootstrap5 %}
 {% block title %}Записаться на прием{% endblock %}
+{% block body_style %}
+  style="background-image: url('/media/backgrounds/bg-image-appointment.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"
+{% endblock %}
 {% block content %}
-  <div class="container py-4">
-    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Запись на обследование</h1>
+  <div class="container py-4 content-block mt-2 mb-5">
+    <h1 class="text-center mb-4">Запись на обследование</h1>
     <p class="text-justify">
       Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
     </p>

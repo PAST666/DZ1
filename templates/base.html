@@ -44,21 +44,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
           rel="stylesheet">
     <style>
+    h1, h2 {
+      font-family: 'Lobster', cursive;
+    }
     .content-wrapper {
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
     }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex-grow: 1;
+    }
+    .content-block {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     </style>
     {% block head %}{% endblock %}
   </head>
-  <body>
+  <body {% block body_style %}{% endblock %}>
     <header class="sticky-top">
       {% include "includes/nav.html" %}
     </header>
-    <div class="text-center text-uppercase py-2" style="background-color: #2271c7;">
-      <a href="tel:+73012660088"
-         class="btn btn-outline-light mx-2">
+    <div class="text-center text-uppercase py-2"
+         style="background-color: #2271c7">
+      <a href="tel:+73012660088" class="btn btn-outline-light mx-2">
         <i class="bi bi-telephone-fill me-1"></i> Позвонить
       </a>
       <a href="https://t.me/uzi_03_AVT"

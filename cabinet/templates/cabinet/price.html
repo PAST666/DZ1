@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Стоимость УЗИ{% endblock %}
+{% block body_style %}
+  style="background-image: url('/media/backgrounds/bg-image-price.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;"
+{% endblock %}
 {% block content %}
-  <div class="container py-4">
-    <h1 class="text-center mb-4" style="font-family: 'Lobster', cursive;">Цены</h1>
+  <div class="container py-4 content-block mt-2 mb-5">
+    <h1 class="text-center mb-4">Цены</h1>
     <div class="table-responsive">
       <table class="table table-bordered table-hover">
         <thead class="table-dark">
