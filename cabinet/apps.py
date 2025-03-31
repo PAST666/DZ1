@@ -7,4 +7,4 @@ class CabinetConfig(AppConfig):
     verbose_name = "Записи клиентов"
 
     def ready(self):
-        import cabinet.signals
+        import cabinet.signals  # noqa: F401

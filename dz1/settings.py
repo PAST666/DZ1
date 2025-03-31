@@ -19,7 +19,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "cabinet",
+    "cabinet.apps.CabinetConfig",
+    "django_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -88,14 +89,12 @@ FILE_CHARSET = "UTF-8"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATIC_URL = "/static/"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"] if DEBUG else []
+STATIC_ROOT = BASE_DIR / "static" if not DEBUG else None
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_STORAGE = (
-    "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
-)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")

@@ -2,7 +2,12 @@
 ##### Project Files
 #########################
 dump.json
-media/
+!**/media/
+**/media/gallery/
+**/media/license/
+**/media/masters/
+**/media/review/
+
 !**/static/*
 **/static/admin/
 **/static/staticfiles.json
