@@ -24,6 +24,9 @@ class VisitModelForm(forms.ModelForm):
             "master": forms.Select(),
             "services": forms.SelectMultiple(),
         }
+        labels = {
+            'master': 'Врач',
+        }        
 
     def clean_phone(self):
         phone = self.cleaned_data.get("phone", "").strip()
@@ -34,3 +37,28 @@ class VisitModelForm(forms.ModelForm):
                 "содержать 10 цифр после кода (например, +79012345678)."
             )
         return phone
+    
+    def clean(self):
+        cleaned_data = super().clean()
+        master = cleaned_data.get('master')
+        selected_services = cleaned_data.get('services')
+
+        if master and selected_services:
+            # Получаем множество услуг, которые предоставляет мастер
+            master_services = set(master.services.values_list('name', flat=True).distinct())
+            
+            # Преобразуем услуги пользователя к множеству для сравнения
+            selected_services_set = set(service.name for service in selected_services)
+
+            # Приводим оба множества к нижнему регистру для страховки
+            master_services = {service.lower() for service in master_services}
+            selected_services_set = {service.lower() for service in selected_services_set}
+            
+            # Проверяем, что мастер предоставляет все выбранные услуги
+            if not selected_services_set.issubset(master_services):
+                # Вычисляем разность множеств, чтобы найти неподдерживаемые услуги
+                unsupported_services = selected_services_set - master_services
+                unsupported_services_str = ', '.join(unsupported_services)
+                self.add_error('services', f"Мастер {master.first_name} {master.last_name} не предоставляет следующие услуги: {unsupported_services_str}.")
+
+        return cleaned_data
