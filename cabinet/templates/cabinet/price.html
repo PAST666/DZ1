@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody>
-          {% for curr_price in prices %}
+          {% for curr_price in prices|dictsort:"-price" %}
             <tr>
               <td>{{ curr_price.name }}</td>
               <td>{{ curr_price.price }}</td>
