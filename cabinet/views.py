@@ -22,7 +22,7 @@ def main(request):
 
 
 def price(request):
-    context = {"prices": Price.objects.all()}
+    context = {"prices": Price.objects.all().order_by('price')}
     return render(request, "cabinet/price.html", context)
 
 
