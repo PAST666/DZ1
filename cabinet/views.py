@@ -60,6 +60,14 @@ def preparation(request):
     return render(request, "cabinet/preparation.html")
 
 
+def agreement(request):
+    return render(request, "cabinet/agreement.html")
+
+
+def politika_obrabotki_pd(request):
+    return render(request, "cabinet/politika_obrabotki_pd.html")
+
+
 def reviews(request):
     page_obj = get_paginator(
         request, Review.objects.all(), settings.REVIEWS_PER_PAGE

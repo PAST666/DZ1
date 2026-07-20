@@ -10,13 +10,55 @@
     <p class="text-justify">
       Хотите быть здоровым? Не откладывайте возможность проверить себя — запишитесь на обследование прямо сейчас! Наши врачи ждут вас, чтобы оказать самые качественные медицинские услуги. Заполните форму, напишите удобное для вас время и мы свяжемся с Вами в ближайшее время! Помните - лучше обследоваться, чем лечиться!
     </p>
-    <form action="" method="post" class="mt-4">
+    <form action="" method="post" class="mt-4 needs-validation" novalidate>
       {% csrf_token %}
       {% bootstrap_form form %}
-      {% bootstrap_button "Отправить" button_type="submit" button_class="btn-primary" %}
+      <div class="mb-3 form-check text-start">
+        <input type="checkbox" class="form-check-input" id="agreementCheckbox" required>
+        <label class="form-check-label small text-muted" for="agreementCheckbox">
+            Я даю <a href="{% url 'agreement' %}" target="_blank" class="text-decoration-underline">согласие на обработку персональных данных</a> в соответствии с <a href="{% url 'politika_obrabotki_pd' %}" target="_blank" class="text-decoration-underline">Политикой в отношении обработки персональных данных</a>.
+        </label>
+        <div class="invalid-feedback">
+            Вы должны согласиться с условиями перед отправкой.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submitBtn" disabled>отправить</button>
+
     </form>
   </div>
   <script>
+    // Скрипт для управления состоянием кнопки отправки
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('agreementCheckbox');
+
+        // Django-bootstrap5 обычно генерирует тег <button> с типом submit внутри формы.
+        // Находим кнопку по ее типу внутри нашей формы.
+        const submitBtn = document.querySelector('form button[type="submit"]');
+
+        if (checkbox && submitBtn) {
+            checkbox.addEventListener('change', function () {
+                // Если чекбокс активен — убираем disabled, если нет — добавляем обратно
+                submitBtn.disabled = !this.checked;
+            });
+        }
+    });
+
+    // Стандартный скрипт валидации Bootstrap (оставляем для надежности)
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+
     async function fetchServices(masterId) {
       const url = `/get_services_by_master/${masterId}/`;
       const response = await fetch(url);
