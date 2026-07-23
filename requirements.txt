@@ -13,3 +13,4 @@ flake8==7.1.2
 django_bootstrap5==25.1
 psycopg==3.2.6
 gunicorn==23.0.0
+whitenoise==6.8.2
